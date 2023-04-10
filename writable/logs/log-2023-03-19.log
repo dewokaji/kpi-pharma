@@ -1,0 +1,16 @@
+CRITICAL - 2023-03-19 20:15:36 --> Call to a member function getResultArray() on bool
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\ViewD->calculate_kpi()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ViewD))
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-03-19 22:35:31 --> syntax error, unexpected '*'
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(282): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp_new\\ht...')
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(247): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(888): class_exists('\\App\\Controller...', true)
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->startController()
+#6 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

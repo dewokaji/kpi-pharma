@@ -1,0 +1,16 @@
+CRITICAL - 2023-03-12 23:04:10 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::getWhere() must be of the type int or null, array given, called in D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Model.php on line 800
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\Database\BaseBuilder->getWhere(Array, Array)
+#1 D:\xampp_new\htdocs\KPI\app\Controllers\Master.php(53): CodeIgniter\Model->__call('getWhere', Array)
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#3 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2023-03-12 23:06:31 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::getWhere() must be of the type int or null, array given, called in D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Model.php on line 800
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Model.php(800): CodeIgniter\Database\BaseBuilder->getWhere(Array, Array)
+#1 D:\xampp_new\htdocs\KPI\app\Controllers\Master.php(53): CodeIgniter\Model->__call('getWhere', Array)
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#3 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}

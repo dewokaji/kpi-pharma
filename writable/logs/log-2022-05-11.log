@@ -1,0 +1,42 @@
+CRITICAL - 2022-05-11 00:24:35 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-11 00:28:20 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-11 00:31:43 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-11 00:49:49 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-11 00:52:10 --> Invalid file: index.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(32): view('index', Array)
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-11 00:52:20 --> Invalid file: index.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('index.php')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('index', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(32): view('index', Array)
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

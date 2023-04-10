@@ -1,0 +1,297 @@
+CRITICAL - 2022-05-08 21:16:02 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(17): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:18:07 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(17): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:19:51 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:20:09 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:21:26 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:21:31 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:22:59 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:23:18 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:25:20 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:26:32 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:26:39 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:27:51 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:34:14 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:36:46 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:36:56 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:37:20 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:39:12 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:39:18 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:41:46 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:43:49 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:47:03 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:49:15 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:49:18 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:49:44 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:51:46 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:52:38 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:52:48 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:54:17 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:54:45 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:54:46 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:54:52 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 21:55:42 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-08 22:02:17 --> Invalid file: partials/page-titleArray.php
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('partials/page-t...')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('partials/page-t...', Array, true)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(18): view('partials/page-t...')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->show_view_input()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

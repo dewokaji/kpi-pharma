@@ -1,0 +1,127 @@
+CRITICAL - 2022-05-17 21:32:11 --> Call to a member function get_where() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 21:35:15 --> Call to a member function database() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 21:37:19 --> Call to a member function database() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(903): App\Controllers\Master->__construct()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(429): CodeIgniter\CodeIgniter->createController()
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 21:37:47 --> Call to a member function database() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 21:37:55 --> Call to a member function get() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 21:38:45 --> Call to a member function get() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 21:40:34 --> Call to a member function get() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 21:41:26 --> Call to a member function query() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 21:41:57 --> Call to a member function query() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 21:42:15 --> Call to a member function result() on string
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 21:42:33 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::result()
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 21:44:47 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::getResult()
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 21:47:08 --> Call to a member function query() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 21:50:24 --> Call to a member function query() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 23:42:58 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get_data()
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 23:50:03 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 23:51:10 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 23:52:20 --> Use of undefined constant id - assumed 'id' (this will throw an Error in a future version of PHP)
+#0 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 90, Array)
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-17 23:52:32 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 23:56:51 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::getArray()
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-17 23:57:51 --> Cannot use object of type stdClass as array
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_detail()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}

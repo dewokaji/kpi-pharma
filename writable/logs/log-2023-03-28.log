@@ -1,0 +1,44 @@
+CRITICAL - 2023-03-28 03:12:16 --> Invalid argument supplied for foreach()
+#0 D:\xampp_new\htdocs\KPI\app\Controllers\CapacityUtil.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'D:\\xampp_new\\ht...', 183, Array)
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\CapacityUtil->export_excel_util()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CapacityUtil))
+#3 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-03-28 03:19:46 --> Invalid argument supplied for foreach()
+#0 D:\xampp_new\htdocs\KPI\app\Controllers\CapacityUtil.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'D:\\xampp_new\\ht...', 183, Array)
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\CapacityUtil->export_excel_util()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CapacityUtil))
+#3 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-03-28 03:24:22 --> Invalid argument supplied for foreach()
+#0 D:\xampp_new\htdocs\KPI\app\Controllers\CapacityUtil.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'D:\\xampp_new\\ht...', 183, Array)
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\CapacityUtil->export_excel_util()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CapacityUtil))
+#3 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-03-28 03:26:57 --> Invalid argument supplied for foreach()
+#0 D:\xampp_new\htdocs\KPI\app\Controllers\CapacityUtil.php(183): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'D:\\xampp_new\\ht...', 183, Array)
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\CapacityUtil->export_excel_util()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CapacityUtil))
+#3 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-03-28 03:30:13 --> Call to a member function get() on null
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('Master/View-Inp...', Array, true)
+#3 D:\xampp_new\htdocs\KPI\app\Controllers\CapacityUtil.php(75): view('Master/View-Inp...', Array)
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\CapacityUtil->show_cap_util()
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CapacityUtil))
+#6 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-03-28 19:24:17 --> Call to a member function getResultArray() on bool
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\CapacityUtil->show_cap_util()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CapacityUtil))
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}

@@ -1,0 +1,127 @@
+CRITICAL - 2023-03-06 01:55:46 --> Call to a member function userdata() on null
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('Front/index', Array, true)
+#3 D:\xampp_new\htdocs\KPI\app\Controllers\Front.php(67): view('Front/index', Array)
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->index()
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#6 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-03-06 02:00:00 --> Call to a member function all_userdata() on null
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('Front/index', Array, true)
+#3 D:\xampp_new\htdocs\KPI\app\Controllers\Front.php(67): view('Front/index', Array)
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->index()
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#6 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-03-06 02:03:45 --> Call to a member function get() on null
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('Front/index', Array, true)
+#3 D:\xampp_new\htdocs\KPI\app\Controllers\Front.php(67): view('Front/index', Array)
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->index()
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#6 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-03-06 20:11:48 --> You must set the database table to be used with your query.
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Model.php(602): CodeIgniter\Database\BaseConnection->table(NULL)
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Model.php(761): CodeIgniter\Model->builder()
+#2 D:\xampp_new\htdocs\KPI\app\Controllers\PageController.php(33): CodeIgniter\Model->__get('getLogin')
+#3 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\PageController->verify_login()
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PageController))
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2023-03-06 20:29:30 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::getResultArray()
+#0 D:\xampp_new\htdocs\KPI\app\Controllers\PageController.php(34): App\Models\LoginModel->getLogin('suwandi.leonard...', '12345678')
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\PageController->verify_login()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PageController))
+#3 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-03-06 20:34:36 --> Call to a member function getLastQuery() on null
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\PageController->verify_login()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PageController))
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-03-06 21:29:08 --> syntax error, unexpected ''AND'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(282): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp_new\\ht...')
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(247): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Logi...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Logi...')
+#3 D:\xampp_new\htdocs\KPI\app\Controllers\PageController.php(30): spl_autoload_call('App\\Models\\Logi...')
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\PageController->verify_login()
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PageController))
+#6 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-03-06 21:31:27 --> Call to a member function getLastQuery() on null
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\PageController->verify_login()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PageController))
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2023-03-06 22:01:33 --> Call to a member function get() on null
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('Front/index', Array, true)
+#3 D:\xampp_new\htdocs\KPI\app\Controllers\Front.php(73): view('Front/index', Array)
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->index()
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#6 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-03-06 22:04:54 --> Call to a member function get() on null
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('Front/index', Array, true)
+#3 D:\xampp_new\htdocs\KPI\app\Controllers\Front.php(73): view('Front/index', Array)
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->index()
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#6 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-03-06 22:11:11 --> Call to a member function get() on null
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('Front/index', Array, true)
+#3 D:\xampp_new\htdocs\KPI\app\Controllers\Front.php(73): view('Front/index', Array)
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->index()
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#6 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-03-06 22:12:38 --> Call to a member function get() on null
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('Front/index', Array, true)
+#3 D:\xampp_new\htdocs\KPI\app\Controllers\Front.php(73): view('Front/index', Array)
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->index()
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#6 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-03-06 22:12:47 --> Call to a member function get() on null
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(230): include()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('Front/index', Array, true)
+#3 D:\xampp_new\htdocs\KPI\app\Controllers\Front.php(73): view('Front/index', Array)
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->index()
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#6 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-03-06 22:13:03 --> syntax error, unexpected '?>'
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\View\View.php(232): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Common.php(1250): CodeIgniter\View\View->render('Front/index', Array, true)
+#2 D:\xampp_new\htdocs\KPI\app\Controllers\Front.php(73): view('Front/index', Array)
+#3 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->index()
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}

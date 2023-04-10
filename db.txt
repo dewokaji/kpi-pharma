@@ -1,0 +1,1072 @@
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Generation Time: Jun 14, 2022 at 01:36 AM
+-- Server version: 10.4.22-MariaDB
+-- PHP Version: 7.4.27
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+--
+-- Database: `fima`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `activity_log`
+--
+
+CREATE TABLE `activity_log` (
+  `id` int(11) NOT NULL,
+  `vUsername` varchar(100) NOT NULL,
+  `vAction` varchar(50) NOT NULL,
+  `vFileName` varchar(100) NOT NULL,
+  `dDate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mlogin`
+--
+
+CREATE TABLE `mlogin` (
+  `id` int(11) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `namaUser` varchar(100) NOT NULL,
+  `mpassword` varchar(50) NOT NULL,
+  `dept` varchar(50) NOT NULL,
+  `iUsed` int(1) NOT NULL,
+  `dCreate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `mlogin`
+--
+
+INSERT INTO `mlogin` (`id`, `email`, `namaUser`, `mpassword`, `dept`, `iUsed`, `dCreate`) VALUES
+(1, 'suwandi.leonard@fimafarma.com', 'suwandi', '12345678', 'MSTD', 1, '2022-05-29 09:44:40'),
+(2, 'mayakurniasari2@gmail.com', 'mayamaya26', 'Maya2605', 'MSTD', 1, '2022-06-02 08:03:19');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mrawdata`
+--
+
+CREATE TABLE `mrawdata` (
+  `id` int(11) NOT NULL,
+  `vKet` varchar(255) NOT NULL,
+  `dept` varchar(20) NOT NULL,
+  `vCategory` varchar(5) NOT NULL,
+  `dEffectiveDate` date NOT NULL,
+  `iUsed` int(11) NOT NULL,
+  `dCreate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `mrawdata`
+--
+
+INSERT INTO `mrawdata` (`id`, `vKet`, `dept`, `vCategory`, `dEffectiveDate`, `iUsed`, `dCreate`) VALUES
+(8, 'COGM Total Standard (Inhouse)', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(9, 'RM Cost Standard', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(10, 'PM Cost Standard', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(11, 'FOH Cost Standard', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(12, 'DL Cost Standard', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(13, 'COGM Total Actual (Inhouse)', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(14, 'RM Cost Actual', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(15, 'PM Cost Actual', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(16, 'FOH Cost Actual', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(17, 'DL Cost Actual', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(18, 'COGM Total Actual Last Year (Inhouse)', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(19, 'RM Cost Actual Last Year', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(20, 'PM Cost Actual Last Year', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(21, 'FOH Cost Actual Last Year', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(22, 'DL Cost Actual Last Year', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(23, 'Unit Produced Budget', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(24, 'Unit Produced Budget Last Year', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(25, 'Unit Produced Actual', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(26, 'Unit Produced Actual Last Year', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(27, 'Man Hours Actual', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(28, 'Man Hours Budget', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(29, 'Man Hours Actual Last Year', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(30, 'Machine Hours Actual', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(31, 'Machine Hours Budget', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(32, 'Machine Hours Actual Last Year', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(33, 'Net Sales (SI) Budget', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(34, 'Net Sales (SI) Actual', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(35, 'Net Sales (SI) Actual Last Year', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(36, 'COGS (Excluded FG Buy) Budget', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(37, 'COGS (Excluded FG Buy) Actual', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(38, 'COGS (Excluded FG Buy) Actual Last Year', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(39, 'Gross Profit Budget', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(40, 'Gross Profit Actual', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(41, 'Gross Profit Actual Last Year', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(42, 'HR Cost Budget', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(43, 'HR Cost Actual', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(44, 'HR Cost Actual Last Year', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(45, 'Cost Saving Target', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(46, 'Cost Saving Actual', 'FA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(47, 'Failure Cost (Value) Last Year', 'QA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(48, 'Failure Cost (Value) Actual', 'QA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(49, 'Failure Cost (Value) Target', 'QA', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(50, 'Failure Cost (Time) Last Year', 'QA', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(51, 'Failure Cost (Time) Actual', 'QA', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(52, 'Failure Cost (Time) Target', 'QA', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(53, 'Total Batch Produced Actual', 'QA', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(54, 'Total Batch Produced Actual exclude Validation', 'QA', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(55, 'Total Rework', 'QA', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(56, 'Total Batch with Deviation', 'QA', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(57, 'Total Batch Produced Last Year', 'QA', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(58, 'Total Rework Last Year', 'QA', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(59, 'Total Batch with Deviation Last Year', 'QA', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(60, 'Deviation Actual', 'QA', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(61, 'Deviation Actual Last Year', 'QA', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(62, '% OPE', 'PROD', 'P', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(63, '% Yield to Standard', 'FA', 'P', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(64, '% OPE Last Year', 'PROD', 'P', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(65, '% Yield to Standard Last Year', 'FA', 'P', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(66, 'Plant Cycle Time Sterile', 'MSTD', 'P', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(67, 'Plant Cycle Time Non Sterile', '', 'P', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(68, 'Plant Cycle Time Sterile Last Year', 'MSTD', 'P', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(69, 'Plant Cycle Time Non Sterile Last Year', '', 'P', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(70, '% Order Fulfillment Actual', 'PPIC', 'P', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(71, '% Order Fulfillment Last Year', 'PPIC', 'P', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(72, 'Recall', 'QS', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(73, 'Fully Rejected Batch', 'QA', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(74, 'Critical Finding', 'QS', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(75, 'Critical Customer Complaint', 'QS', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(76, 'Customer Complaint (unit) Actual', 'QS', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(77, 'Customer Complaint (unit) Last Year', 'QS', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(78, 'Loss Time Accident Actual', 'HSE', 'I', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(79, 'Loss Time Accident Actual Last Year', 'HSE', 'I', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(80, 'Non Loss Time Accident Actual', 'HSE', 'I', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(81, 'Non Loss Time Accident Actual Last Year', 'HSE', 'I', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(82, 'First Aid Accident Actual', 'HSE', 'I', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(83, 'First Aid Accident Actual Last Year', 'HSE', 'I', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(84, 'HAV IDP Progress YTD', 'HRD', 'L', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(85, 'Culture Transformation Progress MTD', 'HRD', 'L', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(86, 'Culture Transformation Progress YTD', 'HRD', 'L', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(87, 'Upskilling Progress MTD', 'HRD', 'L', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(88, 'Upskilling Progress YTD', 'HRD', 'L', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(89, 'Deviation Actual 2020', '', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(90, 'Failure Cost (Value) 2020', '', 'C', '2022-05-01', 1, '2022-05-17 02:54:43'),
+(91, 'Failure Cost (Time) 2020', '', 'Q', '2022-05-01', 1, '2022-05-17 02:54:43');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mrumusgrafik`
+--
+
+CREATE TABLE `mrumusgrafik` (
+  `id` int(11) NOT NULL,
+  `vKet` varchar(255) NOT NULL,
+  `mRumusMTD` text NOT NULL,
+  `mRumusYTD` text NOT NULL,
+  `dCreate` datetime NOT NULL,
+  `iUsed` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `mrumusgrafik`
+--
+
+INSERT INTO `mrumusgrafik` (`id`, `vKet`, `mRumusMTD`, `mRumusYTD`, `dCreate`, `iUsed`) VALUES
+(1, 'COGM Unit To Standard', 'select (SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 13 and tMonth= bulan and tYear= tahun)/\r\n    (select `tResult` from tresultrawdata where idRawData = 25 and tMonth= bulan and tYear= tahun) as result from DUAL', 'select (SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 13 and tMonth BETWEEN 1 and bulan and tYear= tahun)/\r\n    (select sum(`tresult`) from tresultrawdata where idRawData = 25 and tMonth BETWEEN 1 and bulan and tYear= tahun) as result from DUAL', '2022-06-02 07:45:09', 1),
+(2, 'FOH Unit', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 16 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 25 and tMonth= bulan and tYear= tahun)) as result from DUAL\n', 'select (SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 16 and tMonth BETWEEN 1 and bulan and tYear= tahun)/(select sum(`tResult`) from tresultrawdata where idRawData = 25 and tMonth BETWEEN 1 and bulan and tYear= tahun) as result from DUAL\n', '2022-06-02 09:14:32', 1),
+(3, 'DL Unit', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 17 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 25 and tMonth= bulan and tYear= tahun)) as result from DUAL\r\n', 'select (SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 17 and tMonth BETWEEN 1 and bulan and tYear= tahun)/(select sum(`tResult`) from tresultrawdata where idRawData = 25 and tMonth BETWEEN 1 and bulan and tYear= tahun) as result from DUAL\r\n', '2022-06-02 09:14:32', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mrumuskpi`
+--
+
+CREATE TABLE `mrumuskpi` (
+  `id` int(11) NOT NULL,
+  `vKet` varchar(255) NOT NULL,
+  `mRumusMTD` text NOT NULL,
+  `mRumusYTD` text NOT NULL,
+  `dCreate` datetime NOT NULL,
+  `iUsed` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `mrumuskpi`
+--
+
+INSERT INTO `mrumuskpi` (`id`, `vKet`, `mRumusMTD`, `mRumusYTD`, `dCreate`, `iUsed`) VALUES
+(1, 'Customer Complaint (PPM)', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 76 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 25 and tMonth= bulan and tYear= tahun)) * 1000000 as result from DUAL', 'select ((SELECT sum(`tresult`)tresult FROM `tresultrawdata` WHERE idrawdata = 76 and tMonth between 1 and bulan and tYear= tahun)/(select sum(`tResult`)tResult from tresultrawdata where idRawData = 25 and tMonth between 1 and bulan and tYear= tahun)) * 1000000 as result from DUAL', '2022-05-19 00:00:00', 1),
+(2, 'Critical Customer Complaint  (#)', 'select tresult as result from tresultrawdata where idrawdata = 75 and tmonth = bulan and tyear = tahun', 'select sum(tresult) as result from tresultrawdata where idrawdata = 75 and tmonth between 1 and bulan and tyear = tahun', '2022-05-19 00:00:00', 1),
+(3, 'Product Recall (#)', 'select tresult as result from tresultrawdata where idrawdata = 72 and tmonth = bulan and tyear = tahun', 'select sum(tresult) as result from tresultrawdata where idrawdata = 72 and tmonth between 1 and bulan and tyear = tahun', '2022-05-19 00:00:00', 1),
+(4, 'Critical Finding (#)', 'select tresult as result from tresultrawdata where idrawdata = 74 and tmonth = bulan and tyear = tahun', 'select sum(tresult) as result from tresultrawdata where idrawdata = 74 and tmonth between 1 and bulan and tyear = tahun', '2022-05-19 00:00:00', 1),
+(5, 'BRFT (%)', 'select (\n    ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 54 and tMonth = bulan and tYear= tahun)\n    - (SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 56 and tMonth = bulan and tYear= tahun))\n	/(select `tResult` from tresultrawdata where idRawData = 54 and tMonth = bulan and tYear= tahun) * 100) \n    as result \nfrom DUAL', 'select (\r\n    ((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 54 and tMonth BETWEEN 1 and bulan and tYear= tahun)\r\n    - (SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 56 and tMonth BETWEEN 1 and bulan and tYear= tahun))\r\n	/(select sum(`tResult`) from tresultrawdata where idRawData = 54 and tMonth BETWEEN 1 and bulan and tYear= tahun) * 100) \r\n    as result \r\nfrom DUAL', '2022-05-19 00:00:00', 1),
+(6, 'Reduced Deviation (%)', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 60 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 61 and tMonth= bulan and tYear= tahun) - 1)*100 as result from DUAL', 'select ((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 60 and tMonth BETWEEN 1 and bulan and tYear= tahun)/(select sum(`tResult`) from tresultrawdata where idRawData = 61 and tMonth BETWEEN 1 and bulan and tYear= tahun)- 1 )*100 as result from DUAL', '2022-05-19 00:00:00', 1),
+(7, 'Reduce Internal Failure Cost (Time)(%)', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 51 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 50 and tMonth= bulan and tYear= tahun) - 1)*100 as result from DUAL', 'select ((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 51 and tMonth between 1 and bulan and tYear= tahun)/(select sum(`tresult`) from tresultrawdata where idRawData = 50 and tMonth BETWEEN 1 and bulan and tYear= tahun) - 1)*100 as result from DUAL', '2022-05-19 00:00:00', 1),
+(8, '% Rework', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 55 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 53 and tMonth= bulan and tYear= tahun))*100 as result from DUAL', 'select ((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 55 and tMonth BETWEEN 1 and bulan and tYear= tahun)/(select sum(`tresult`) from tresultrawdata where idRawData = 53 and tMonth BETWEEN 1 and bulan and tYear= tahun))*100 as result from DUAL', '2022-05-19 00:00:00', 1),
+(9, 'Fully Rejected Batch', 'select tresult as result from tresultrawdata where idrawdata = 73 and tmonth = bulan and tyear = tahun', 'select sum(tresult) as result from tresultrawdata where idrawdata = 73 and tmonth between 1 and bulan and tyear = tahun', '2022-05-19 00:00:00', 1),
+(10, 'COGM/Unit (%) to Standard', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 13 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 8 and tMonth= bulan and tYear= tahun)) * 100 as result from DUAL', 'select ((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 13 and tMonth BETWEEN 1 and bulan and tYear= tahun)/(select sum(`tResult`) from tresultrawdata where idRawData = 8 and tMonth BETWEEN 1 and bulan and tYear= tahun)) * 100 as result from DUAL', '2022-05-19 00:00:00', 1),
+(11, 'COGM/Unit (%) to Last Year', 'select ((\r\n    (SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 13 and tMonth= bulan and tYear= tahun)/\r\n    (select `tResult` from tresultrawdata where idRawData = 25 and tMonth= bulan and tYear= tahun)\r\n)/((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 18 and tMonth= bulan and tYear= tahun)/\r\n    (select `tResult` from tresultrawdata where idRawData = 26 and tMonth= bulan and tYear= tahun))) * 100 as result from DUAL', 'select ((\r\n    (SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 13 and tMonth BETWEEN 1 and bulan and tYear= tahun)/\r\n    (select sum(`tresult`) from tresultrawdata where idRawData = 25 and tMonth BETWEEN 1 and bulan and tYear= tahun)\r\n)/((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 18 and tMonth BETWEEN 1 and bulan and tYear= tahun)/\r\n    (select sum(`tresult`) from tresultrawdata where idRawData = 26 and tMonth BETWEEN 1 and bulan and tYear= tahun))) * 100 as result from DUAL', '2022-05-19 00:00:00', 1),
+(12, 'DL/Unit (%) to Last Year', 'select ((\n    (SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 17 and tMonth= bulan and tYear= tahun)/\n    (select `tResult` from tresultrawdata where idRawData = 25 and tMonth= bulan and tYear= tahun)\n)/((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 22 and tMonth= bulan and tYear= tahun)/\n    (select `tResult` from tresultrawdata where idRawData = 26 and tMonth= bulan and tYear= tahun))) * 100 as result from DUAL', 'select ((\n    (SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 17 and tMonth BETWEEN 1 and bulan and tYear= tahun)/\n    (select sum(`tResult`) from tresultrawdata where idRawData = 25 and tMonth BETWEEN 1 and bulan and tYear= tahun)\n)/((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 22 and tMonth BETWEEN 1 and bulan and tYear= tahun)/\n    (select sum(`tResult`) from tresultrawdata where idRawData = 26 and tMonth BETWEEN 1 and bulan and tYear= tahun))) * 100 as result from DUAL', '2022-05-19 00:00:00', 1),
+(13, 'FOH/Unit (%) to Last Year', 'select ((\r\n    (SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 16 and tMonth= bulan and tYear= tahun)/\r\n    (select `tResult` from tresultrawdata where idRawData = 25 and tMonth= bulan and tYear= tahun)\r\n)/((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 21 and tMonth= bulan and tYear= tahun)/\r\n    (select `tResult` from tresultrawdata where idRawData = 26 and tMonth= bulan and tYear= tahun))) * 100 as result from DUAL', 'select ((\r\n    (SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 16 and tMonth BETWEEN 1 and bulan and tYear= tahun)/\r\n    (select sum(`tResult`) from tresultrawdata where idRawData = 25 and tMonth BETWEEN 1 and bulan and tYear= tahun)\r\n)/((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 21 and tMonth BETWEEN 1 and bulan and tYear= tahun)/\r\n    (select sum(`tResult`) from tresultrawdata where idRawData = 26 and tMonth BETWEEN 1 and bulan and tYear= tahun))) * 100 as result from DUAL', '2022-05-19 00:00:00', 1),
+(14, 'Cost Saving (Billion Rupiah)', 'select tresult as result from tresultrawdata where idrawdata = 46 and tmonth = bulan and tyear = tahun', 'select sum(tresult) as result from tresultrawdata where idrawdata = 46 and tmonth between 1 and bulan and tyear = tahun', '2022-05-19 00:00:00', 1),
+(15, 'Reduce Internal Failure Cost (Value)', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 48 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 47 and tMonth= bulan and tYear= tahun) - 1)*100 as result from DUAL', 'select ((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 48 and tMonth BETWEEN 1 and bulan and tYear= tahun)/(select sum(`tResult`) from tresultrawdata where idRawData = 47 and tMonth BETWEEN 1 and bulan and tYear= tahun) - 1 )*100 as result from DUAL', '2022-05-19 00:00:00', 1),
+(16, 'Overall Plant Effectiveness (%)', 'select tresult as result from tresultrawdata where idrawdata = 62 and tmonth = bulan and tyear = tahun', 'select AVG(tresult) as result from tresultrawdata where idrawdata = 62 and tmonth between 1 and bulan and tyear = tahun', '2022-05-19 00:00:00', 1),
+(17, 'Yield (%)', 'select tresult as result from tresultrawdata where idrawdata = 63 and tmonth = bulan and tyear = tahun', 'select AVG(tresult) as result from tresultrawdata where idrawdata = 63 and tmonth between 1 and bulan and tyear = tahun', '2022-05-19 00:00:00', 1),
+(18, 'Output / Manhours Actual', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 25 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 27 and tMonth= bulan and tYear= tahun)) as result from DUAL', 'select ((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 25 and tMonth BETWEEN 1 and bulan and tYear= tahun)/(select sum(`tResult`) from tresultrawdata where idRawData = 27 and tMonth BETWEEN 1 and bulan and tYear= tahun) ) as result from DUAL', '2022-05-19 00:00:00', 1),
+(19, 'Order Fulfillment (%)', 'select tresult as result from tresultrawdata where idrawdata = 70 and tmonth = bulan and tyear = tahun', 'select AVG(tresult) as result from tresultrawdata where idrawdata = 70 and tmonth between 1 and bulan and tyear = tahun', '2022-05-19 00:00:00', 1),
+(20, 'Plant Cycle Time Sterile (days)', 'select tresult as result from tresultrawdata where idrawdata = 66 and tmonth = bulan and tyear = tahun', 'select AVG(tresult) as result from tresultrawdata where idrawdata = 66 and tmonth between 1 and bulan and tyear = tahun', '2022-05-19 00:00:00', 1),
+(21, 'Plant Cycle Time Non Sterile (days)', 'select tresult as result from tresultrawdata where idrawdata = 67 and tmonth = bulan and tyear = tahun', 'select AVG(tresult) as result from tresultrawdata where idrawdata = 67 and tmonth between 1 and bulan and tyear = tahun', '2022-05-19 00:00:00', 1),
+(22, 'Loss Time Accident (#)', 'select tresult as result from tresultrawdata where idrawdata = 78 and tmonth = bulan and tyear = tahun', 'select SUM(tresult) as result from tresultrawdata where idrawdata = 78 and tmonth between 1 and bulan and tyear = tahun', '2022-05-19 00:00:00', 1),
+(23, 'Non Loss Time Accident Reduction (%)', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 80 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 81 and tMonth= bulan and tYear= tahun) - 1)*100 as result from DUAL', 'select ((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 80 and tMonth BETWEEN 1 and bulan and tYear= tahun)/(select sum(`tResult`) from tresultrawdata where idRawData = 81 and tMonth BETWEEN 1 and bulan and tYear= tahun) - 1 )*100 as result from DUAL', '2022-05-19 00:00:00', 1),
+(24, 'First Aid Reduction (%)', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 82 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 83 and tMonth= bulan and tYear= tahun) - 1)*100 as result from DUAL', 'select ((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 82 and tMonth BETWEEN 1 and bulan and tYear= tahun)/(select sum(`tResult`) from tresultrawdata where idRawData = 83 and tMonth BETWEEN 1 and bulan and tYear= tahun) - 1 )*100 as result from DUAL', '2022-05-19 00:00:00', 1),
+(25, 'GP/HR Cost Actual', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 40 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 43 and tMonth= bulan and tYear= tahun)) as result from DUAL', 'select ((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 40 and tMonth BETWEEN 1 and bulan and tYear= tahun)/(select sum(`tResult`) from tresultrawdata where idRawData = 43 and tMonth BETWEEN 1 and bulan and tYear= tahun)) as result from DUAL', '2022-05-19 00:00:00', 1),
+(26, 'GP/HR Cost Budget', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 39 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 42 and tMonth= bulan and tYear= tahun)) as result from DUAL', 'select ((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 39 and tMonth BETWEEN 1 and bulan and tYear= tahun)/(select sum(`tResult`) from tresultrawdata where idRawData = 42 and tMonth BETWEEN 1 and bulan and tYear= tahun)) as result from DUAL', '2022-05-19 00:00:00', 1),
+(27, 'Output / Manhours Budget', 'select ((SELECT `tresult` FROM `tresultrawdata` WHERE idrawdata = 23 and tMonth= bulan and tYear= tahun)/(select `tResult` from tresultrawdata where idRawData = 28 and tMonth= bulan and tYear= tahun)) as result from DUAL', 'select ((SELECT sum(`tresult`) FROM `tresultrawdata` WHERE idrawdata = 23 and tMonth BETWEEN 1 and bulan and tYear= tahun)/(select sum(`tResult`) from tresultrawdata where idRawData = 28 and tMonth BETWEEN 1 and bulan and tYear= tahun)) as result from DUAL', '2022-05-19 00:00:00', 1),
+(28, 'Cost Saving Target', 'select tresult as result from tresultrawdata where idrawdata = 45 and tmonth = bulan and tyear = tahun', 'select SUM(tresult) as result from tresultrawdata where idrawdata = 45 and tmonth between 1 and bulan and tyear = tahun', '2022-05-19 00:00:00', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tresultgrafik`
+--
+
+CREATE TABLE `tresultgrafik` (
+  `id` int(11) NOT NULL,
+  `idRawData` int(11) NOT NULL,
+  `tResultMTD` double NOT NULL,
+  `tResultYTD` double NOT NULL,
+  `tMonth` double NOT NULL,
+  `tYear` double NOT NULL,
+  `dCreate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tresultgrafik`
+--
+
+INSERT INTO `tresultgrafik` (`id`, `idRawData`, `tResultMTD`, `tResultYTD`, `tMonth`, `tYear`, `dCreate`) VALUES
+(90, 1, 20987.00496942801, 20987.00496942801, 1, 2022, '2022-06-03 12:26:38'),
+(91, 2, 6866.904229286697, 6866.904229286697, 1, 2022, '2022-06-03 12:26:38'),
+(92, 3, 1269.3982321835567, 1269.3982321835567, 1, 2022, '2022-06-03 12:26:38'),
+(96, 1, 18105.73276963917, 19510.737336136157, 2, 2022, '2022-06-03 12:44:11'),
+(97, 2, 6341.180742634287, 6597.541075238574, 2, 2022, '2022-06-03 12:44:11'),
+(98, 3, 1235.711336151804, 1252.1381918855977, 2, 2022, '2022-06-03 12:44:11'),
+(111, 1, 23098.554747438106, 20646.027945469246, 3, 2022, '2022-06-03 04:39:07'),
+(112, 2, 2383.2018137299356, 5264.000585395669, 3, 2022, '2022-06-03 04:39:07'),
+(113, 3, 1452.9342160152353, 1315.675940453208, 3, 2022, '2022-06-03 04:39:07'),
+(120, 1, 19454.4251281634, 20281.46510593867, 4, 2022, '2022-06-09 01:49:51'),
+(121, 2, 5804.598453901864, 5429.392854635505, 4, 2022, '2022-06-09 01:49:51'),
+(122, 3, 1017.4991748718367, 1224.4507714928309, 4, 2022, '2022-06-09 01:49:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tresultkpi`
+--
+
+CREATE TABLE `tresultkpi` (
+  `id` int(11) NOT NULL,
+  `idRawData` varchar(255) NOT NULL,
+  `tResultMTD` double NOT NULL,
+  `tResultYTD` double NOT NULL,
+  `tMonth` double NOT NULL,
+  `tYear` double NOT NULL,
+  `dCreate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tresultkpi`
+--
+
+INSERT INTO `tresultkpi` (`id`, `idRawData`, `tResultMTD`, `tResultYTD`, `tMonth`, `tYear`, `dCreate`) VALUES
+(1520, '1', 2.1521992247778394, 2.1521992247778394, 1, 2022, '2022-06-03 12:26:38'),
+(1521, '2', 0, 0, 1, 2022, '2022-06-03 12:26:38'),
+(1522, '3', 0, 0, 1, 2022, '2022-06-03 12:26:38'),
+(1523, '4', 0, 0, 1, 2022, '2022-06-03 12:26:38'),
+(1524, '5', 97.14285714285714, 97.14285714285714, 1, 2022, '2022-06-03 12:26:38'),
+(1525, '6', -25, -25, 1, 2022, '2022-06-03 12:26:38'),
+(1526, '7', -57.843137254901954, -57.843137254901954, 1, 2022, '2022-06-03 12:26:38'),
+(1527, '8', 0, 0, 1, 2022, '2022-06-03 12:26:38'),
+(1528, '9', 0, 0, 1, 2022, '2022-06-03 12:26:38'),
+(1529, '10', 103.59007506273359, 103.59007506273359, 1, 2022, '2022-06-03 12:26:38'),
+(1530, '11', 98.84872424931814, 98.84872424931814, 1, 2022, '2022-06-03 12:26:38'),
+(1531, '12', 98.67260305534246, 98.67260305534246, 1, 2022, '2022-06-03 12:26:38'),
+(1532, '13', 90.06842811055313, 90.06842811055313, 1, 2022, '2022-06-03 12:26:38'),
+(1533, '14', 931723000, 931723392, 1, 2022, '2022-06-03 12:26:38'),
+(1534, '15', -90.28568891353974, -90.28568891353974, 1, 2022, '2022-06-03 12:26:38'),
+(1535, '16', 88.5, 88.5, 1, 2022, '2022-06-03 12:26:38'),
+(1536, '17', 98, 98, 1, 2022, '2022-06-03 12:26:38'),
+(1537, '18', 85.4133591647955, 85.4133591647955, 1, 2022, '2022-06-03 12:26:38'),
+(1538, '19', 99.92, 99.91999816894531, 1, 2022, '2022-06-03 12:26:38'),
+(1539, '20', 15.55, 15.550000190734863, 1, 2022, '2022-06-03 12:26:38'),
+(1540, '21', 0, 0, 1, 2022, '2022-06-03 12:26:38'),
+(1541, '22', 0, 0, 1, 2022, '2022-06-03 12:26:38'),
+(1542, '23', 0, 0, 1, 2022, '2022-06-03 12:26:38'),
+(1543, '24', -100, -100, 1, 2022, '2022-06-03 12:26:38'),
+(1544, '25', 3.920853388476001, 3.920853388476001, 1, 2022, '2022-06-03 12:26:38'),
+(1545, '26', 4.075022144246036, 4.075022144246036, 1, 2022, '2022-06-03 12:26:38'),
+(1546, '27', 78.61292128337122, 78.61292128337122, 1, 2022, '2022-06-03 12:26:38'),
+(1547, '28', 789101000, 789101184, 1, 2022, '2022-06-03 12:26:38'),
+(1548, '1', 2.048307278864746, 2.098968461949375, 2, 2022, '2022-06-03 12:44:11'),
+(1549, '2', 0, 0, 2, 2022, '2022-06-03 12:44:11'),
+(1550, '3', 0, 0, 2, 2022, '2022-06-03 12:44:11'),
+(1551, '4', 0, 0, 2, 2022, '2022-06-03 12:44:11'),
+(1552, '5', 93.93939393939394, 95.58823529411765, 2, 2022, '2022-06-03 12:44:11'),
+(1553, '6', -40, -33.333333333333336, 2, 2022, '2022-06-03 12:44:11'),
+(1554, '7', -33.82352941176471, -45.833333333333336, 2, 2022, '2022-06-03 12:44:11'),
+(1555, '8', 0, 0, 2, 2022, '2022-06-03 12:44:11'),
+(1556, '9', 0, 0, 2, 2022, '2022-06-03 12:44:11'),
+(1557, '10', 108.38006586655271, 105.81364177457498, 2, 2022, '2022-06-03 12:44:11'),
+(1558, '11', 78.0361513890436, 88.21045913901483, 2, 2022, '2022-06-03 12:44:11'),
+(1559, '12', 67.27260284772699, 81.61266180049732, 2, 2022, '2022-06-03 12:44:11'),
+(1560, '13', 87.51803837053218, 88.51367667995711, 2, 2022, '2022-06-03 12:44:11'),
+(1561, '14', 1219350000, 2151075584, 2, 2022, '2022-06-03 12:44:11'),
+(1562, '15', -41.31712627805685, -65.8014075957983, 2, 2022, '2022-06-03 12:44:11'),
+(1563, '16', 90.5, 89.5, 2, 2022, '2022-06-03 12:44:11'),
+(1564, '17', 99.4, 98.70000076293945, 2, 2022, '2022-06-03 12:44:11'),
+(1565, '18', 98.59700886737048, 91.69539252249936, 2, 2022, '2022-06-03 12:44:11'),
+(1566, '19', 99.63, 99.77499771118164, 2, 2022, '2022-06-03 12:44:11'),
+(1567, '20', 15.72, 15.635000228881836, 2, 2022, '2022-06-03 12:44:11'),
+(1568, '21', 0, 0, 2, 2022, '2022-06-03 12:44:11'),
+(1569, '22', 0, 0, 2, 2022, '2022-06-03 12:44:11'),
+(1570, '23', 0, 0, 2, 2022, '2022-06-03 12:44:11'),
+(1571, '24', -100, -100, 2, 2022, '2022-06-03 12:44:11'),
+(1572, '25', 3.167477534405032, 3.4903683160708976, 2, 2022, '2022-06-03 12:44:11'),
+(1573, '26', 4.377974481479059, 4.2194581651560945, 2, 2022, '2022-06-03 12:44:11'),
+(1574, '27', 75.41636109019498, 77.23097582241103, 2, 2022, '2022-06-03 12:44:11'),
+(1575, '28', 680159000, 1469260544, 2, 2022, '2022-06-03 12:44:11'),
+(1604, '1', 4.534324839031468, 2.869586614526278, 3, 2022, '2022-06-03 04:39:07'),
+(1605, '2', 0, 0, 3, 2022, '2022-06-03 04:39:07'),
+(1606, '3', 0, 0, 3, 2022, '2022-06-03 04:39:07'),
+(1607, '4', 0, 0, 3, 2022, '2022-06-03 04:39:07'),
+(1608, '5', 100, 96.93877551020408, 3, 2022, '2022-06-03 04:39:07'),
+(1609, '6', -83.33333333333334, -61.904761904761905, 3, 2022, '2022-06-03 04:39:07'),
+(1610, '7', -79.90196078431373, -57.18954248366013, 3, 2022, '2022-06-03 04:39:07'),
+(1611, '8', 0, 0, 3, 2022, '2022-06-03 04:39:07'),
+(1612, '9', 0, 0, 3, 2022, '2022-06-03 04:39:07'),
+(1613, '10', 108.54699754399255, 106.76541602911493, 3, 2022, '2022-06-03 04:39:07'),
+(1614, '11', 114.05696815022961, 96.94997778109003, 3, 2022, '2022-06-03 04:39:07'),
+(1615, '12', 133.26985152522008, 98.29412263508391, 3, 2022, '2022-06-03 04:39:07'),
+(1616, '13', 45.95592677118151, 81.56210359365778, 3, 2022, '2022-06-03 04:39:07'),
+(1617, '14', 1340260000, 3491330688, 3, 2022, '2022-06-03 04:39:07'),
+(1618, '15', -86.20594069622736, -72.60291862927465, 3, 2022, '2022-06-03 04:39:07'),
+(1619, '16', 90.2, 89.73333231608073, 3, 2022, '2022-06-03 04:39:07'),
+(1620, '17', 99, 98.8000005086263, 3, 2022, '2022-06-03 04:39:07'),
+(1621, '18', 74.02087146199794, 85.25392866843231, 3, 2022, '2022-06-03 04:39:07'),
+(1622, '19', 98.91, 99.48666636149089, 3, 2022, '2022-06-03 04:39:07'),
+(1623, '20', 15.57, 15.613333384195963, 3, 2022, '2022-06-03 04:39:07'),
+(1624, '21', 0, 0, 3, 2022, '2022-06-03 04:39:07'),
+(1625, '22', 0, 0, 3, 2022, '2022-06-03 04:39:07'),
+(1626, '23', 0, 0, 3, 2022, '2022-06-03 04:39:07'),
+(1627, '24', -75, -85.71428571428572, 3, 2022, '2022-06-03 04:39:07'),
+(1628, '25', 6.462594735314807, 4.367351847575912, 3, 2022, '2022-06-03 04:39:07'),
+(1629, '26', 5.126720730196113, 4.4995605725099965, 3, 2022, '2022-06-03 04:39:07'),
+(1630, '27', 76.84463315421043, 77.09543444168817, 3, 2022, '2022-06-03 04:39:07'),
+(1631, '28', 1250360000, 2719623296, 3, 2022, '2022-06-03 04:39:07'),
+(1632, '1', 4.882415168036456, 3.485397925391572, 4, 2022, '2022-06-09 01:49:51'),
+(1633, '2', 0, 0, 4, 2022, '2022-06-09 01:49:51'),
+(1634, '3', 0, 0, 4, 2022, '2022-06-09 01:49:51'),
+(1635, '4', 0, 0, 4, 2022, '2022-06-09 01:49:51'),
+(1636, '5', 97.43589743589743, 97.08029197080292, 4, 2022, '2022-06-09 01:49:51'),
+(1637, '6', -42.85714285714286, -57.14285714285714, 4, 2022, '2022-06-09 01:49:51'),
+(1638, '7', -84.31372549019608, -63.970588235294116, 4, 2022, '2022-06-09 01:49:51'),
+(1639, '8', 0, 0, 4, 2022, '2022-06-09 01:49:51'),
+(1640, '9', 0, 0, 4, 2022, '2022-06-09 01:49:51'),
+(1641, '10', 118.519483784191, 109.96590584060641, 4, 2022, '2022-06-09 01:49:51'),
+(1642, '11', 101.32683281454773, 98.09671828799212, 4, 2022, '2022-06-09 01:49:51'),
+(1643, '12', 88.75621680319225, 95.5388708046851, 4, 2022, '2022-06-09 01:49:51'),
+(1644, '13', 112.06106381845342, 89.34750141076282, 4, 2022, '2022-06-09 01:49:51'),
+(1645, '14', 1334230000, 4825559040, 4, 2022, '2022-06-09 01:49:51'),
+(1646, '15', -98.25756709454807, -79.016580745593, 4, 2022, '2022-06-09 01:49:51'),
+(1647, '16', 90.6, 89.94999885559082, 4, 2022, '2022-06-09 01:49:51'),
+(1648, '17', 99.4, 98.95000076293945, 4, 2022, '2022-06-09 01:49:51'),
+(1649, '18', 98.56432467115816, 88.92802686252584, 4, 2022, '2022-06-09 01:49:51'),
+(1650, '19', 98.15, 99.15250015258789, 4, 2022, '2022-06-09 01:49:51'),
+(1651, '20', 15.45, 15.572499990463257, 4, 2022, '2022-06-09 01:49:51'),
+(1652, '21', 0, 0, 4, 2022, '2022-06-09 01:49:51'),
+(1653, '22', 0, 0, 4, 2022, '2022-06-09 01:49:51'),
+(1654, '23', 0, 0, 4, 2022, '2022-06-09 01:49:51'),
+(1655, '24', -100, -87.5, 4, 2022, '2022-06-09 01:49:51'),
+(1656, '25', 5.792112202191127, 4.686301343793433, 4, 2022, '2022-06-09 01:49:51'),
+(1657, '26', 4.9288597285544995, 4.602041929987254, 4, 2022, '2022-06-09 01:49:51'),
+(1658, '27', 76.73853296514831, 77.01407302476848, 4, 2022, '2022-06-09 01:49:51'),
+(1659, '28', 1641190000, 4360815232, 4, 2022, '2022-06-09 01:49:51');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tresultrawdata`
+--
+
+CREATE TABLE `tresultrawdata` (
+  `id` int(11) NOT NULL,
+  `idRawData` int(11) NOT NULL,
+  `tResult` float NOT NULL,
+  `tMonth` double NOT NULL,
+  `tYear` double NOT NULL,
+  `dCreate` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tresultrawdata`
+--
+
+INSERT INTO `tresultrawdata` (`id`, `idRawData`, `tResult`, `tMonth`, `tYear`, `dCreate`) VALUES
+(621, 8, 9413470000, 1, 2022, '2022-06-03 00:00:00'),
+(622, 9, 2140270000, 1, 2022, '2022-06-03 00:00:00'),
+(623, 10, 2288150000, 1, 2022, '2022-06-03 00:00:00'),
+(624, 11, 2740110000, 1, 2022, '2022-06-03 00:00:00'),
+(625, 12, 510662000, 1, 2022, '2022-06-03 00:00:00'),
+(626, 13, 9751420000, 1, 2022, '2022-06-03 00:00:00'),
+(627, 14, 2026040000, 1, 2022, '2022-06-03 00:00:00'),
+(628, 15, 2152790000, 1, 2022, '2022-06-03 00:00:00'),
+(629, 16, 3190650000, 1, 2022, '2022-06-03 00:00:00'),
+(630, 17, 589814000, 1, 2022, '2022-06-03 00:00:00'),
+(631, 18, 10852700000, 1, 2022, '2022-06-03 00:00:00'),
+(632, 19, 1557740000, 1, 2022, '2022-06-03 00:00:00'),
+(633, 20, 3110390000, 1, 2022, '2022-06-03 00:00:00'),
+(634, 21, 3897140000, 1, 2022, '2022-06-03 00:00:00'),
+(635, 22, 657596000, 1, 2022, '2022-06-03 00:00:00'),
+(636, 23, 691337, 1, 2022, '2022-06-03 00:00:00'),
+(637, 24, 362665, 1, 2022, '2022-06-03 00:00:00'),
+(638, 25, 464641, 1, 2022, '2022-06-03 00:00:00'),
+(639, 26, 511161, 1, 2022, '2022-06-03 00:00:00'),
+(640, 27, 5439.91, 1, 2022, '2022-06-03 00:00:00'),
+(641, 28, 8794.19, 1, 2022, '2022-06-03 00:00:00'),
+(642, 29, 7418.77, 1, 2022, '2022-06-03 00:00:00'),
+(643, 30, 2473.67, 1, 2022, '2022-06-03 00:00:00'),
+(644, 31, 4956.49, 1, 2022, '2022-06-03 00:00:00'),
+(645, 32, 3851.27, 1, 2022, '2022-06-03 00:00:00'),
+(646, 33, 46010700000, 1, 2022, '2022-06-03 00:00:00'),
+(647, 34, 43218000000, 1, 2022, '2022-06-03 00:00:00'),
+(648, 35, 33025600000, 1, 2022, '2022-06-03 00:00:00'),
+(649, 36, 10433000000, 1, 2022, '2022-06-03 00:00:00'),
+(650, 37, 9928380000, 1, 2022, '2022-06-03 00:00:00'),
+(651, 38, 11397800000, 1, 2022, '2022-06-03 00:00:00'),
+(652, 39, 12096600000, 1, 2022, '2022-06-03 00:00:00'),
+(653, 40, 9226520000, 1, 2022, '2022-06-03 00:00:00'),
+(654, 41, 8920580000, 1, 2022, '2022-06-03 00:00:00'),
+(655, 42, 2968460000, 1, 2022, '2022-06-03 00:00:00'),
+(656, 43, 2353190000, 1, 2022, '2022-06-03 00:00:00'),
+(657, 44, 2126510000, 1, 2022, '2022-06-03 00:00:00'),
+(658, 45, 789101000, 1, 2022, '2022-06-03 00:00:00'),
+(659, 46, 931723000, 1, 2022, '2022-06-03 00:00:00'),
+(660, 47, 24188500, 1, 2022, '2022-06-03 00:00:00'),
+(661, 48, 2349740, 1, 2022, '2022-06-03 00:00:00'),
+(662, 49, 12094200, 1, 2022, '2022-06-03 00:00:00'),
+(663, 50, 102, 1, 2022, '2022-06-03 00:00:00'),
+(664, 51, 43, 1, 2022, '2022-06-03 00:00:00'),
+(665, 52, 51, 1, 2022, '2022-06-03 00:00:00'),
+(666, 53, 35, 1, 2022, '2022-06-03 00:00:00'),
+(667, 54, 35, 1, 2022, '2022-06-03 00:00:00'),
+(668, 55, 0, 1, 2022, '2022-06-03 00:00:00'),
+(669, 56, 1, 1, 2022, '2022-06-03 00:00:00'),
+(670, 57, 41, 1, 2022, '2022-06-03 00:00:00'),
+(671, 58, 0, 1, 2022, '2022-06-03 00:00:00'),
+(672, 59, 1, 1, 2022, '2022-06-03 00:00:00'),
+(673, 60, 3, 1, 2022, '2022-06-03 00:00:00'),
+(674, 61, 4, 1, 2022, '2022-06-03 00:00:00'),
+(675, 62, 88.5, 1, 2022, '2022-06-03 00:00:00'),
+(676, 63, 98, 1, 2022, '2022-06-03 00:00:00'),
+(677, 64, 81.65, 1, 2022, '2022-06-03 00:00:00'),
+(678, 65, 102.43, 1, 2022, '2022-06-03 00:00:00'),
+(679, 66, 15.55, 1, 2022, '2022-06-03 00:00:00'),
+(680, 67, 0, 1, 2022, '2022-06-03 00:00:00'),
+(681, 68, 18.32, 1, 2022, '2022-06-03 00:00:00'),
+(682, 69, 0, 1, 2022, '2022-06-03 00:00:00'),
+(683, 70, 99.92, 1, 2022, '2022-06-03 00:00:00'),
+(684, 71, 90.9, 1, 2022, '2022-06-03 00:00:00'),
+(685, 72, 0, 1, 2022, '2022-06-03 00:00:00'),
+(686, 73, 0, 1, 2022, '2022-06-03 00:00:00'),
+(687, 74, 0, 1, 2022, '2022-06-03 00:00:00'),
+(688, 75, 0, 1, 2022, '2022-06-03 00:00:00'),
+(689, 76, 1, 1, 2022, '2022-06-03 00:00:00'),
+(690, 77, 15, 1, 2022, '2022-06-03 00:00:00'),
+(691, 78, 0, 1, 2022, '2022-06-03 00:00:00'),
+(692, 79, 0, 1, 2022, '2022-06-03 00:00:00'),
+(693, 80, 0, 1, 2022, '2022-06-03 00:00:00'),
+(694, 81, 0, 1, 2022, '2022-06-03 00:00:00'),
+(695, 82, 0, 1, 2022, '2022-06-03 00:00:00'),
+(696, 83, 1, 1, 2022, '2022-06-03 00:00:00'),
+(697, 84, 100, 1, 2022, '2022-06-03 00:00:00'),
+(698, 85, 200, 1, 2022, '2022-06-03 00:00:00'),
+(699, 86, 200, 1, 2022, '2022-06-03 00:00:00'),
+(700, 87, 100, 1, 2022, '2022-06-03 00:00:00'),
+(701, 88, 100, 1, 2022, '2022-06-03 00:00:00'),
+(702, 89, 34, 1, 2022, '2022-06-03 00:00:00'),
+(703, 90, 90640600, 1, 2022, '2022-06-03 00:00:00'),
+(704, 91, 259.9, 1, 2022, '2022-06-03 00:00:00'),
+(705, 8, 8155890000, 2, 2022, '2022-06-03 00:00:00'),
+(706, 9, 1363090000, 2, 2022, '2022-06-03 00:00:00'),
+(707, 10, 2162980000, 2, 2022, '2022-06-03 00:00:00'),
+(708, 11, 2560090000, 2, 2022, '2022-06-03 00:00:00'),
+(709, 12, 474314000, 2, 2022, '2022-06-03 00:00:00'),
+(710, 13, 8839360000, 2, 2022, '2022-06-03 00:00:00'),
+(711, 14, 1307810000, 2, 2022, '2022-06-03 00:00:00'),
+(712, 15, 2035640000, 2, 2022, '2022-06-03 00:00:00'),
+(713, 16, 3095820000, 2, 2022, '2022-06-03 00:00:00'),
+(714, 17, 603284000, 2, 2022, '2022-06-03 00:00:00'),
+(715, 18, 9710010000, 2, 2022, '2022-06-03 00:00:00'),
+(716, 19, 1790820000, 2, 2022, '2022-06-03 00:00:00'),
+(717, 20, 2485310000, 2, 2022, '2022-06-03 00:00:00'),
+(718, 21, 3032300000, 2, 2022, '2022-06-03 00:00:00'),
+(719, 22, 768738000, 2, 2022, '2022-06-03 00:00:00'),
+(720, 23, 505089, 2, 2022, '2022-06-03 00:00:00'),
+(721, 24, 388045, 2, 2022, '2022-06-03 00:00:00'),
+(722, 25, 488208, 2, 2022, '2022-06-03 00:00:00'),
+(723, 26, 418504, 2, 2022, '2022-06-03 00:00:00'),
+(724, 27, 4951.55, 2, 2022, '2022-06-03 00:00:00'),
+(725, 28, 6697.34, 2, 2022, '2022-06-03 00:00:00'),
+(726, 29, 7225.13, 2, 2022, '2022-06-03 00:00:00'),
+(727, 30, 2384.27, 2, 2022, '2022-06-03 00:00:00'),
+(728, 31, 3842.35, 2, 2022, '2022-06-03 00:00:00'),
+(729, 32, 3646.54, 2, 2022, '2022-06-03 00:00:00'),
+(730, 33, 45153000000, 2, 2022, '2022-06-03 00:00:00'),
+(731, 34, 43250100000, 2, 2022, '2022-06-03 00:00:00'),
+(732, 35, 41123900000, 2, 2022, '2022-06-03 00:00:00'),
+(733, 36, 10360000000, 2, 2022, '2022-06-03 00:00:00'),
+(734, 37, 9263770000, 2, 2022, '2022-06-03 00:00:00'),
+(735, 38, 10145700000, 2, 2022, '2022-06-03 00:00:00'),
+(736, 39, 11841500000, 2, 2022, '2022-06-03 00:00:00'),
+(737, 40, 9937410000, 2, 2022, '2022-06-03 00:00:00'),
+(738, 41, 13813100000, 2, 2022, '2022-06-03 00:00:00'),
+(739, 42, 2704790000, 2, 2022, '2022-06-03 00:00:00'),
+(740, 43, 3137330000, 2, 2022, '2022-06-03 00:00:00'),
+(741, 44, 2706490000, 2, 2022, '2022-06-03 00:00:00'),
+(742, 45, 680159000, 2, 2022, '2022-06-03 00:00:00'),
+(743, 46, 1219350000, 2, 2022, '2022-06-03 00:00:00'),
+(744, 47, 24188500, 2, 2022, '2022-06-03 00:00:00'),
+(745, 48, 14194500, 2, 2022, '2022-06-03 00:00:00'),
+(746, 49, 12094200, 2, 2022, '2022-06-03 00:00:00'),
+(747, 50, 102, 2, 2022, '2022-06-03 00:00:00'),
+(748, 51, 67.5, 2, 2022, '2022-06-03 00:00:00'),
+(749, 52, 51, 2, 2022, '2022-06-03 00:00:00'),
+(750, 53, 33, 2, 2022, '2022-06-03 00:00:00'),
+(751, 54, 33, 2, 2022, '2022-06-03 00:00:00'),
+(752, 55, 0, 2, 2022, '2022-06-03 00:00:00'),
+(753, 56, 2, 2, 2022, '2022-06-03 00:00:00'),
+(754, 57, 44, 2, 2022, '2022-06-03 00:00:00'),
+(755, 58, 0, 2, 2022, '2022-06-03 00:00:00'),
+(756, 59, 2, 2, 2022, '2022-06-03 00:00:00'),
+(757, 60, 3, 2, 2022, '2022-06-03 00:00:00'),
+(758, 61, 5, 2, 2022, '2022-06-03 00:00:00'),
+(759, 62, 90.5, 2, 2022, '2022-06-03 00:00:00'),
+(760, 63, 99.4, 2, 2022, '2022-06-03 00:00:00'),
+(761, 64, 88.7, 2, 2022, '2022-06-03 00:00:00'),
+(762, 65, 102.58, 2, 2022, '2022-06-03 00:00:00'),
+(763, 66, 15.72, 2, 2022, '2022-06-03 00:00:00'),
+(764, 67, 0, 2, 2022, '2022-06-03 00:00:00'),
+(765, 68, 16.89, 2, 2022, '2022-06-03 00:00:00'),
+(766, 69, 0, 2, 2022, '2022-06-03 00:00:00'),
+(767, 70, 99.63, 2, 2022, '2022-06-03 00:00:00'),
+(768, 71, 81.52, 2, 2022, '2022-06-03 00:00:00'),
+(769, 72, 0, 2, 2022, '2022-06-03 00:00:00'),
+(770, 73, 0, 2, 2022, '2022-06-03 00:00:00'),
+(771, 74, 0, 2, 2022, '2022-06-03 00:00:00'),
+(772, 75, 0, 2, 2022, '2022-06-03 00:00:00'),
+(773, 76, 1, 2, 2022, '2022-06-03 00:00:00'),
+(774, 77, 0, 2, 2022, '2022-06-03 00:00:00'),
+(775, 78, 0, 2, 2022, '2022-06-03 00:00:00'),
+(776, 79, 0, 2, 2022, '2022-06-03 00:00:00'),
+(777, 80, 0, 2, 2022, '2022-06-03 00:00:00'),
+(778, 81, 0, 2, 2022, '2022-06-03 00:00:00'),
+(779, 82, 0, 2, 2022, '2022-06-03 00:00:00'),
+(780, 83, 2, 2, 2022, '2022-06-03 00:00:00'),
+(781, 84, 100, 2, 2022, '2022-06-03 00:00:00'),
+(782, 85, 100, 2, 2022, '2022-06-03 00:00:00'),
+(783, 86, 100, 2, 2022, '2022-06-03 00:00:00'),
+(784, 87, 50, 2, 2022, '2022-06-03 00:00:00'),
+(785, 88, 80, 2, 2022, '2022-06-03 00:00:00'),
+(786, 89, 9, 2, 2022, '2022-06-03 00:00:00'),
+(787, 90, 90640600, 2, 2022, '2022-06-03 00:00:00'),
+(788, 91, 259.9, 2, 2022, '2022-06-03 00:00:00'),
+(789, 8, 9386080000, 3, 2022, '2022-06-03 00:00:00'),
+(790, 9, 3443260000, 3, 2022, '2022-06-03 00:00:00'),
+(791, 10, 2043840000, 3, 2022, '2022-06-03 00:00:00'),
+(792, 11, 2140860000, 3, 2022, '2022-06-03 00:00:00'),
+(793, 12, 456031000, 3, 2022, '2022-06-03 00:00:00'),
+(794, 13, 10188300000, 3, 2022, '2022-06-03 00:00:00'),
+(795, 14, 3667210000, 3, 2022, '2022-06-03 00:00:00'),
+(796, 15, 3060290000, 3, 2022, '2022-06-03 00:00:00'),
+(797, 16, 1051180000, 3, 2022, '2022-06-03 00:00:00'),
+(798, 17, 640860000, 3, 2022, '2022-06-03 00:00:00'),
+(799, 18, 14842300000, 3, 2022, '2022-06-03 00:00:00'),
+(800, 19, 3545820000, 3, 2022, '2022-06-03 00:00:00'),
+(801, 20, 5080130000, 3, 2022, '2022-06-03 00:00:00'),
+(802, 21, 3800650000, 3, 2022, '2022-06-03 00:00:00'),
+(803, 22, 799010000, 3, 2022, '2022-06-03 00:00:00'),
+(804, 23, 643354, 3, 2022, '2022-06-03 00:00:00'),
+(805, 24, 307369, 3, 2022, '2022-06-03 00:00:00'),
+(806, 25, 441080, 3, 2022, '2022-06-03 00:00:00'),
+(807, 26, 732889, 3, 2022, '2022-06-03 00:00:00'),
+(808, 27, 5958.86, 3, 2022, '2022-06-03 00:00:00'),
+(809, 28, 8372.14, 3, 2022, '2022-06-03 00:00:00'),
+(810, 29, 9896.48, 3, 2022, '2022-06-03 00:00:00'),
+(811, 30, 2901.19, 3, 2022, '2022-06-03 00:00:00'),
+(812, 31, 4514.13, 3, 2022, '2022-06-03 00:00:00'),
+(813, 32, 5050.68, 3, 2022, '2022-06-03 00:00:00'),
+(814, 33, 49806200000, 3, 2022, '2022-06-03 00:00:00'),
+(815, 34, 49793100000, 3, 2022, '2022-06-03 00:00:00'),
+(816, 35, 46195100000, 3, 2022, '2022-06-03 00:00:00'),
+(817, 36, 11723700000, 3, 2022, '2022-06-03 00:00:00'),
+(818, 37, 11018200000, 3, 2022, '2022-06-03 00:00:00'),
+(819, 38, 11649200000, 3, 2022, '2022-06-03 00:00:00'),
+(820, 39, 12990000000, 3, 2022, '2022-06-03 00:00:00'),
+(821, 40, 14851700000, 3, 2022, '2022-06-03 00:00:00'),
+(822, 41, 14705800000, 3, 2022, '2022-06-03 00:00:00'),
+(823, 42, 2533790000, 3, 2022, '2022-06-03 00:00:00'),
+(824, 43, 2298110000, 3, 2022, '2022-06-03 00:00:00'),
+(825, 44, 2395000000, 3, 2022, '2022-06-03 00:00:00'),
+(826, 45, 1250360000, 3, 2022, '2022-06-03 00:00:00'),
+(827, 46, 1340260000, 3, 2022, '2022-06-03 00:00:00'),
+(828, 47, 24188500, 3, 2022, '2022-06-03 00:00:00'),
+(829, 48, 3336570, 3, 2022, '2022-06-03 00:00:00'),
+(830, 49, 12094200, 3, 2022, '2022-06-03 00:00:00'),
+(831, 50, 102, 3, 2022, '2022-06-03 00:00:00'),
+(832, 51, 20.5, 3, 2022, '2022-06-03 00:00:00'),
+(833, 52, 51, 3, 2022, '2022-06-03 00:00:00'),
+(834, 53, 33, 3, 2022, '2022-06-03 00:00:00'),
+(835, 54, 30, 3, 2022, '2022-06-03 00:00:00'),
+(836, 55, 0, 3, 2022, '2022-06-03 00:00:00'),
+(837, 56, 0, 3, 2022, '2022-06-03 00:00:00'),
+(838, 57, 51, 3, 2022, '2022-06-03 00:00:00'),
+(839, 58, 0, 3, 2022, '2022-06-03 00:00:00'),
+(840, 59, 4, 3, 2022, '2022-06-03 00:00:00'),
+(841, 60, 2, 3, 2022, '2022-06-03 00:00:00'),
+(842, 61, 12, 3, 2022, '2022-06-03 00:00:00'),
+(843, 62, 90.2, 3, 2022, '2022-06-03 00:00:00'),
+(844, 63, 99, 3, 2022, '2022-06-03 00:00:00'),
+(845, 64, 86.03, 3, 2022, '2022-06-03 00:00:00'),
+(846, 65, 102.83, 3, 2022, '2022-06-03 00:00:00'),
+(847, 66, 15.57, 3, 2022, '2022-06-03 00:00:00'),
+(848, 67, 0, 3, 2022, '2022-06-03 00:00:00'),
+(849, 68, 16.43, 3, 2022, '2022-06-03 00:00:00'),
+(850, 69, 0, 3, 2022, '2022-06-03 00:00:00'),
+(851, 70, 98.91, 3, 2022, '2022-06-03 00:00:00'),
+(852, 71, 96.45, 3, 2022, '2022-06-03 00:00:00'),
+(853, 72, 0, 3, 2022, '2022-06-03 00:00:00'),
+(854, 73, 0, 3, 2022, '2022-06-03 00:00:00'),
+(855, 74, 0, 3, 2022, '2022-06-03 00:00:00'),
+(856, 75, 0, 3, 2022, '2022-06-03 00:00:00'),
+(857, 76, 2, 3, 2022, '2022-06-03 00:00:00'),
+(858, 77, 10, 3, 2022, '2022-06-03 00:00:00'),
+(859, 78, 0, 3, 2022, '2022-06-03 00:00:00'),
+(860, 79, 0, 3, 2022, '2022-06-03 00:00:00'),
+(861, 80, 0, 3, 2022, '2022-06-03 00:00:00'),
+(862, 81, 0, 3, 2022, '2022-06-03 00:00:00'),
+(863, 82, 1, 3, 2022, '2022-06-03 00:00:00'),
+(864, 83, 4, 3, 2022, '2022-06-03 00:00:00'),
+(865, 84, 96, 3, 2022, '2022-06-03 00:00:00'),
+(866, 85, 100, 3, 2022, '2022-06-03 00:00:00'),
+(867, 86, 100, 3, 2022, '2022-06-03 00:00:00'),
+(868, 87, 133, 3, 2022, '2022-06-03 00:00:00'),
+(869, 88, 100, 3, 2022, '2022-06-03 00:00:00'),
+(870, 89, 15, 3, 2022, '2022-06-03 00:00:00'),
+(871, 90, 90640600, 3, 2022, '2022-06-03 00:00:00'),
+(872, 91, 259.9, 3, 2022, '2022-06-03 00:00:00'),
+(873, 8, 10085900000, 4, 2022, '2022-06-03 00:00:00'),
+(874, 9, 2841590000, 4, 2022, '2022-06-03 00:00:00'),
+(875, 10, 2448580000, 4, 2022, '2022-06-03 00:00:00'),
+(876, 11, 2616920000, 4, 2022, '2022-06-03 00:00:00'),
+(877, 12, 557820000, 4, 2022, '2022-06-03 00:00:00'),
+(878, 13, 11953800000, 4, 2022, '2022-06-03 00:00:00'),
+(879, 14, 2857380000, 4, 2022, '2022-06-03 00:00:00'),
+(880, 15, 3003850000, 4, 2022, '2022-06-03 00:00:00'),
+(881, 16, 3566640000, 4, 2022, '2022-06-03 00:00:00'),
+(882, 17, 625202000, 4, 2022, '2022-06-03 00:00:00'),
+(883, 18, 13427300000, 4, 2022, '2022-06-03 00:00:00'),
+(884, 19, 3012910000, 4, 2022, '2022-06-03 00:00:00'),
+(885, 20, 4317020000, 4, 2022, '2022-06-03 00:00:00'),
+(886, 21, 3622540000, 4, 2022, '2022-06-03 00:00:00'),
+(887, 22, 801734000, 4, 2022, '2022-06-03 00:00:00'),
+(888, 23, 540735, 4, 2022, '2022-06-03 00:00:00'),
+(889, 24, 516866, 4, 2022, '2022-06-03 00:00:00'),
+(890, 25, 614450, 4, 2022, '2022-06-03 00:00:00'),
+(891, 26, 699351, 4, 2022, '2022-06-03 00:00:00'),
+(892, 27, 6234, 4, 2022, '2022-06-03 00:00:00'),
+(893, 28, 7046.46, 4, 2022, '2022-06-03 00:00:00'),
+(894, 29, 7121.6, 4, 2022, '2022-06-03 00:00:00'),
+(895, 30, 2747.06, 4, 2022, '2022-06-03 00:00:00'),
+(896, 31, 3969.05, 4, 2022, '2022-06-03 00:00:00'),
+(897, 32, 3682.21, 4, 2022, '2022-06-03 00:00:00'),
+(898, 33, 48210300000, 4, 2022, '2022-06-03 00:00:00'),
+(899, 34, 47688100000, 4, 2022, '2022-06-03 00:00:00'),
+(900, 35, 55262100000, 4, 2022, '2022-06-03 00:00:00'),
+(901, 36, 10861900000, 4, 2022, '2022-06-03 00:00:00'),
+(902, 37, 10071600000, 4, 2022, '2022-06-03 00:00:00'),
+(903, 38, 14298800000, 4, 2022, '2022-06-03 00:00:00'),
+(904, 39, 12684500000, 4, 2022, '2022-06-03 00:00:00'),
+(905, 40, 13011800000, 4, 2022, '2022-06-03 00:00:00'),
+(906, 41, 16600200000, 4, 2022, '2022-06-03 00:00:00'),
+(907, 42, 2573510000, 4, 2022, '2022-06-03 00:00:00'),
+(908, 43, 2246480000, 4, 2022, '2022-06-03 00:00:00'),
+(909, 44, 2424790000, 4, 2022, '2022-06-03 00:00:00'),
+(910, 45, 1641190000, 4, 2022, '2022-06-03 00:00:00'),
+(911, 46, 1334230000, 4, 2022, '2022-06-03 00:00:00'),
+(912, 47, 24188500, 4, 2022, '2022-06-03 00:00:00'),
+(913, 48, 421468, 4, 2022, '2022-06-03 00:00:00'),
+(914, 49, 12094200, 4, 2022, '2022-06-03 00:00:00'),
+(915, 50, 102, 4, 2022, '2022-06-03 00:00:00'),
+(916, 51, 16, 4, 2022, '2022-06-03 00:00:00'),
+(917, 52, 51, 4, 2022, '2022-06-03 00:00:00'),
+(918, 53, 39, 4, 2022, '2022-06-03 00:00:00'),
+(919, 54, 39, 4, 2022, '2022-06-03 00:00:00'),
+(920, 55, 0, 4, 2022, '2022-06-03 00:00:00'),
+(921, 56, 1, 4, 2022, '2022-06-03 00:00:00'),
+(922, 57, 64, 4, 2022, '2022-06-03 00:00:00'),
+(923, 58, 0, 4, 2022, '2022-06-03 00:00:00'),
+(924, 59, 2, 4, 2022, '2022-06-03 00:00:00'),
+(925, 60, 4, 4, 2022, '2022-06-03 00:00:00'),
+(926, 61, 7, 4, 2022, '2022-06-03 00:00:00'),
+(927, 62, 90.6, 4, 2022, '2022-06-03 00:00:00'),
+(928, 63, 99.4, 4, 2022, '2022-06-03 00:00:00'),
+(929, 64, 87.25, 4, 2022, '2022-06-03 00:00:00'),
+(930, 65, 102.48, 4, 2022, '2022-06-03 00:00:00'),
+(931, 66, 15.45, 4, 2022, '2022-06-03 00:00:00'),
+(932, 67, 0, 4, 2022, '2022-06-03 00:00:00'),
+(933, 68, 16.44, 4, 2022, '2022-06-03 00:00:00'),
+(934, 69, 0, 4, 2022, '2022-06-03 00:00:00'),
+(935, 70, 98.15, 4, 2022, '2022-06-03 00:00:00'),
+(936, 71, 99.45, 4, 2022, '2022-06-03 00:00:00'),
+(937, 72, 0, 4, 2022, '2022-06-03 00:00:00'),
+(938, 73, 0, 4, 2022, '2022-06-03 00:00:00'),
+(939, 74, 0, 4, 2022, '2022-06-03 00:00:00'),
+(940, 75, 0, 4, 2022, '2022-06-03 00:00:00'),
+(941, 76, 3, 4, 2022, '2022-06-03 00:00:00'),
+(942, 77, 1, 4, 2022, '2022-06-03 00:00:00'),
+(943, 78, 0, 4, 2022, '2022-06-03 00:00:00'),
+(944, 79, 0, 4, 2022, '2022-06-03 00:00:00'),
+(945, 80, 0, 4, 2022, '2022-06-03 00:00:00'),
+(946, 81, 0, 4, 2022, '2022-06-03 00:00:00'),
+(947, 82, 0, 4, 2022, '2022-06-03 00:00:00'),
+(948, 83, 1, 4, 2022, '2022-06-03 00:00:00'),
+(949, 84, 104, 4, 2022, '2022-06-03 00:00:00'),
+(950, 85, 100, 4, 2022, '2022-06-03 00:00:00'),
+(951, 86, 100, 4, 2022, '2022-06-03 00:00:00'),
+(952, 87, 100, 4, 2022, '2022-06-03 00:00:00'),
+(953, 88, 102, 4, 2022, '2022-06-03 00:00:00'),
+(954, 89, 11, 4, 2022, '2022-06-03 00:00:00'),
+(955, 90, 90640600, 4, 2022, '2022-06-03 00:00:00'),
+(956, 91, 259.9, 4, 2022, '2022-06-03 00:00:00'),
+(957, 8, 6524420000, 5, 2022, '2022-06-13 00:00:00'),
+(958, 9, 2077800000, 5, 2022, '2022-06-13 00:00:00'),
+(959, 10, 1516190000, 5, 2022, '2022-06-13 00:00:00'),
+(960, 11, 1630490000, 5, 2022, '2022-06-13 00:00:00'),
+(961, 12, 316504000, 5, 2022, '2022-06-13 00:00:00'),
+(962, 13, 8128460000, 5, 2022, '2022-06-13 00:00:00'),
+(963, 14, 2922620000, 5, 2022, '2022-06-13 00:00:00'),
+(964, 15, 1940740000, 5, 2022, '2022-06-13 00:00:00'),
+(965, 16, 1118510000, 5, 2022, '2022-06-13 00:00:00'),
+(966, 17, 324567000, 5, 2022, '2022-06-13 00:00:00'),
+(967, 18, 11889600000, 5, 2022, '2022-06-13 00:00:00'),
+(968, 19, 2554330000, 5, 2022, '2022-06-13 00:00:00'),
+(969, 20, 4532620000, 5, 2022, '2022-06-13 00:00:00'),
+(970, 21, 2515790000, 5, 2022, '2022-06-13 00:00:00'),
+(971, 22, 717931000, 5, 2022, '2022-06-13 00:00:00'),
+(972, 23, 494340, 5, 2022, '2022-06-13 00:00:00'),
+(973, 24, 186021, 5, 2022, '2022-06-13 00:00:00'),
+(974, 25, 358740, 5, 2022, '2022-06-13 00:00:00'),
+(975, 26, 649474, 5, 2022, '2022-06-13 00:00:00'),
+(976, 27, 4604.59, 5, 2022, '2022-06-13 00:00:00'),
+(977, 28, 6340.34, 5, 2022, '2022-06-13 00:00:00'),
+(978, 29, 6364.04, 5, 2022, '2022-06-13 00:00:00'),
+(979, 30, 2181.38, 5, 2022, '2022-06-13 00:00:00'),
+(980, 31, 3444.72, 5, 2022, '2022-06-13 00:00:00'),
+(981, 32, 3694.52, 5, 2022, '2022-06-13 00:00:00'),
+(982, 33, 43704000000, 5, 2022, '2022-06-13 00:00:00'),
+(983, 34, 38109800000, 5, 2022, '2022-06-13 00:00:00'),
+(984, 35, 46288900000, 5, 2022, '2022-06-13 00:00:00'),
+(985, 36, 10173700000, 5, 2022, '2022-06-13 00:00:00'),
+(986, 37, 8614580000, 5, 2022, '2022-06-13 00:00:00'),
+(987, 38, 11796100000, 5, 2022, '2022-06-13 00:00:00'),
+(988, 39, 11426100000, 5, 2022, '2022-06-13 00:00:00'),
+(989, 40, 11878900000, 5, 2022, '2022-06-13 00:00:00'),
+(990, 41, 14400800000, 5, 2022, '2022-06-13 00:00:00'),
+(991, 42, 2332140000, 5, 2022, '2022-06-13 00:00:00'),
+(992, 43, 1236180000, 5, 2022, '2022-06-13 00:00:00'),
+(993, 44, 2158830000, 5, 2022, '2022-06-13 00:00:00'),
+(994, 45, 1617060000, 5, 2022, '2022-06-13 00:00:00'),
+(995, 46, 1335480000, 5, 2022, '2022-06-13 00:00:00'),
+(996, 47, 24188500, 5, 2022, '2022-06-13 00:00:00'),
+(997, 48, 22832000, 5, 2022, '2022-06-13 00:00:00'),
+(998, 49, 12094200, 5, 2022, '2022-06-13 00:00:00'),
+(999, 50, 102, 5, 2022, '2022-06-13 00:00:00'),
+(1000, 51, 41.9, 5, 2022, '2022-06-13 00:00:00'),
+(1001, 52, 51, 5, 2022, '2022-06-13 00:00:00'),
+(1002, 53, 30, 5, 2022, '2022-06-13 00:00:00'),
+(1003, 54, 30, 5, 2022, '2022-06-13 00:00:00'),
+(1004, 55, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1005, 56, 2, 5, 2022, '2022-06-13 00:00:00'),
+(1006, 57, 58, 5, 2022, '2022-06-13 00:00:00'),
+(1007, 58, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1008, 59, 3, 5, 2022, '2022-06-13 00:00:00'),
+(1009, 60, 7, 5, 2022, '2022-06-13 00:00:00'),
+(1010, 61, 7, 5, 2022, '2022-06-13 00:00:00'),
+(1011, 62, 83.7, 5, 2022, '2022-06-13 00:00:00'),
+(1012, 63, 100.1, 5, 2022, '2022-06-13 00:00:00'),
+(1013, 64, 85.6319, 5, 2022, '2022-06-13 00:00:00'),
+(1014, 65, 103.167, 5, 2022, '2022-06-13 00:00:00'),
+(1015, 66, 15.63, 5, 2022, '2022-06-13 00:00:00'),
+(1016, 67, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1017, 68, 17.13, 5, 2022, '2022-06-13 00:00:00'),
+(1018, 69, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1019, 70, 100.09, 5, 2022, '2022-06-13 00:00:00'),
+(1020, 71, 93.58, 5, 2022, '2022-06-13 00:00:00'),
+(1021, 72, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1022, 73, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1023, 74, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1024, 75, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1025, 76, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1026, 77, 39, 5, 2022, '2022-06-13 00:00:00'),
+(1027, 78, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1028, 79, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1029, 80, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1030, 81, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1031, 82, 0, 5, 2022, '2022-06-13 00:00:00'),
+(1032, 83, 2, 5, 2022, '2022-06-13 00:00:00'),
+(1033, 84, 102.5, 5, 2022, '2022-06-13 00:00:00'),
+(1034, 85, 100, 5, 2022, '2022-06-13 00:00:00'),
+(1035, 86, 100, 5, 2022, '2022-06-13 00:00:00'),
+(1036, 87, 150, 5, 2022, '2022-06-13 00:00:00'),
+(1037, 88, 102, 5, 2022, '2022-06-13 00:00:00'),
+(1038, 89, 4, 5, 2022, '2022-06-13 00:00:00'),
+(1039, 90, 90640600, 5, 2022, '2022-06-13 00:00:00'),
+(1040, 91, 259.9, 5, 2022, '2022-06-13 00:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `vdata`
+-- (See below for the actual view)
+--
+CREATE TABLE `vdata` (
+`id` int(11)
+,`vKet` varchar(255)
+,`dept` varchar(20)
+,`tYear` double
+,`result` varbinary(287)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `vkpitotarget`
+-- (See below for the actual view)
+--
+CREATE TABLE `vkpitotarget` (
+`id` int(11)
+,`vKet` varchar(255)
+,`tYear` double
+,`tResultMTDJan` double
+,`tResultYTDJan` double
+,`tResultMTDfeb` double
+,`tResultYTDFeb` double
+,`tResultMTDMar` double
+,`tResultYTDMar` double
+,`tResultMTDApr` double
+,`tResultYTDApr` double
+,`tResultMTDMei` double
+,`tResultYTDMei` double
+,`tResultMTDJun` double
+,`tResultYTDJun` double
+,`tResultMTDJul` double
+,`tResultYTDJul` double
+,`tResultMTDAug` double
+,`tResultYTDAug` double
+,`tResultMTDSep` double
+,`tResultYTDSep` double
+,`tResultMTDOkt` double
+,`tResultYTDOkt` double
+,`tResultMTDNov` double
+,`tResultYTDNov` double
+,`tResultMTDDes` double
+,`tResultYTDDes` double
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `vkpitotargetdata`
+-- (See below for the actual view)
+--
+CREATE TABLE `vkpitotargetdata` (
+`id` int(11)
+,`vKet` varchar(255)
+,`tYear` double
+,`MTD` varbinary(287)
+,`YTD` varbinary(287)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Stand-in structure for view `vrawdata`
+-- (See below for the actual view)
+--
+CREATE TABLE `vrawdata` (
+`id` int(11)
+,`vKet` varchar(255)
+,`dept` varchar(20)
+,`tYear` double
+,`mJan` double
+,`mFeb` double
+,`mMar` double
+,`mApr` double
+,`mMei` double
+,`mJun` double
+,`mJul` double
+,`mAug` double
+,`mSep` double
+,`mOct` double
+,`mNov` double
+,`mDec` double
+);
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vdata`
+--
+DROP TABLE IF EXISTS `vdata`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vdata`  AS SELECT `a`.`id` AS `id`, `a`.`vKet` AS `vKet`, `a`.`dept` AS `dept`, `a`.`tYear` AS `tYear`, concat(sum(`a`.`mJan`),',',sum(`a`.`mFeb`),',',sum(`a`.`mMar`),',',sum(`a`.`mApr`),',',sum(`a`.`mMei`),',',sum(`a`.`mJun`),',',sum(`a`.`mJul`),',',sum(`a`.`mAug`),',',sum(`a`.`mSep`),',',sum(`a`.`mOct`),',',sum(`a`.`mNov`),',',sum(`a`.`mDec`)) AS `result` FROM (select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,`b`.`tResult` AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 1)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,`b`.`tResult` AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 2)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,`b`.`tResult` AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 3)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,`b`.`tResult` AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 4)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,`b`.`tResult` AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 5)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,`b`.`tResult` AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 6)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,`b`.`tResult` AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 7)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,`b`.`tResult` AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 8)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,`b`.`tResult` AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 9)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,`b`.`tResult` AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 10)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,`b`.`tResult` AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 11)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,`b`.`tResult` AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,`b`.`tResult` AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 12))) AS `a` WHERE `a`.`tYear` is not null GROUP BY `a`.`id`, `a`.`vKet`, `a`.`tYear` ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vkpitotarget`
+--
+DROP TABLE IF EXISTS `vkpitotarget`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vkpitotarget`  AS SELECT `a`.`id` AS `id`, `a`.`vKet` AS `vKet`, `a`.`tYear` AS `tYear`, sum(`a`.`tResultMTDJan`) AS `tResultMTDJan`, sum(`a`.`tResultYTDJan`) AS `tResultYTDJan`, sum(`a`.`tResultMTDfeb`) AS `tResultMTDfeb`, sum(`a`.`tResultYTDFeb`) AS `tResultYTDFeb`, sum(`a`.`tResultMTDMar`) AS `tResultMTDMar`, sum(`a`.`tResultYTDMar`) AS `tResultYTDMar`, sum(`a`.`tResultMTDApr`) AS `tResultMTDApr`, sum(`a`.`tResultYTDApr`) AS `tResultYTDApr`, sum(`a`.`tResultMTDMei`) AS `tResultMTDMei`, sum(`a`.`tResultYTDMei`) AS `tResultYTDMei`, sum(`a`.`tResultMTDJun`) AS `tResultMTDJun`, sum(`a`.`tResultYTDJun`) AS `tResultYTDJun`, sum(`a`.`tResultMTDJul`) AS `tResultMTDJul`, sum(`a`.`tResultYTDJul`) AS `tResultYTDJul`, sum(`a`.`tResultMTDAug`) AS `tResultMTDAug`, sum(`a`.`tResultYTDAug`) AS `tResultYTDAug`, sum(`a`.`tResultMTDSep`) AS `tResultMTDSep`, sum(`a`.`tResultYTDSep`) AS `tResultYTDSep`, sum(`a`.`tResultMTDOkt`) AS `tResultMTDOkt`, sum(`a`.`tResultYTDOkt`) AS `tResultYTDOkt`, sum(`a`.`tResultMTDNov`) AS `tResultMTDNov`, sum(`a`.`tResultYTDNov`) AS `tResultYTDNov`, sum(`a`.`tResultMTDDes`) AS `tResultMTDDes`, sum(`a`.`tResultYTDDes`) AS `tResultYTDDes` FROM (select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,`trk`.`tResultMTD` AS `tResultMTDJan`,`trk`.`tResultYTD` AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumuskpi` `mrk` left join `tresultkpi` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 1)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,`trk`.`tResultMTD` AS `tResultMTDfeb`,`trk`.`tResultYTD` AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumuskpi` `mrk` left join `tresultkpi` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 2)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,`trk`.`tResultMTD` AS `tResultMTDMar`,`trk`.`tResultYTD` AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumuskpi` `mrk` left join `tresultkpi` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 3)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,`trk`.`tResultMTD` AS `tResultMTDApr`,`trk`.`tResultYTD` AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumuskpi` `mrk` left join `tresultkpi` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 4)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,`trk`.`tResultMTD` AS `tResultMTDMei`,`trk`.`tResultYTD` AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumuskpi` `mrk` left join `tresultkpi` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 5)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,`trk`.`tResultMTD` AS `tResultMTDJun`,`trk`.`tResultYTD` AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumuskpi` `mrk` left join `tresultkpi` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 6)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,`trk`.`tResultMTD` AS `tResultMTDJul`,`trk`.`tResultYTD` AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumuskpi` `mrk` left join `tresultkpi` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 7)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,`trk`.`tResultMTD` AS `tResultMTDAug`,`trk`.`tResultYTD` AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumuskpi` `mrk` left join `tresultkpi` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 8)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,`trk`.`tResultMTD` AS `tResultMTDSep`,`trk`.`tResultYTD` AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumuskpi` `mrk` left join `tresultkpi` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 9)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,`trk`.`tResultMTD` AS `tResultMTDOkt`,`trk`.`tResultYTD` AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumuskpi` `mrk` left join `tresultkpi` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 10)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,`trk`.`tResultMTD` AS `tResultMTDNov`,`trk`.`tResultYTD` AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumuskpi` `mrk` left join `tresultkpi` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 11)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,`trk`.`tResultMTD` AS `tResultMTDDes`,`trk`.`tResultYTD` AS `tResultYTDDes` from (`mrumuskpi` `mrk` left join `tresultkpi` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 12))) AS `a` WHERE `a`.`tYear` is not null GROUP BY `a`.`id`, `a`.`vKet`, `a`.`tYear` ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vkpitotargetdata`
+--
+DROP TABLE IF EXISTS `vkpitotargetdata`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vkpitotargetdata`  AS SELECT `a`.`id` AS `id`, `a`.`vKet` AS `vKet`, `a`.`tYear` AS `tYear`, concat(sum(`a`.`tResultMTDJan`),',',sum(`a`.`tResultMTDfeb`),',',sum(`a`.`tResultMTDMar`),',',sum(`a`.`tResultMTDApr`),',',sum(`a`.`tResultMTDMei`),',',sum(`a`.`tResultMTDJun`),',',sum(`a`.`tResultMTDJul`),',',sum(`a`.`tResultMTDAug`),',',sum(`a`.`tResultMTDSep`),',',sum(`a`.`tResultMTDOkt`),',',sum(`a`.`tResultMTDNov`),',',sum(`a`.`tResultMTDDes`)) AS `MTD`, concat(sum(`a`.`tResultYTDJan`),',',sum(`a`.`tResultYTDFeb`),',',sum(`a`.`tResultYTDMar`),',',sum(`a`.`tResultYTDApr`),',',sum(`a`.`tResultYTDMei`),',',sum(`a`.`tResultYTDJun`),',',sum(`a`.`tResultYTDJul`),',',sum(`a`.`tResultYTDAug`),',',sum(`a`.`tResultYTDSep`),',',sum(`a`.`tResultYTDOkt`),',',sum(`a`.`tResultYTDNov`),',',sum(`a`.`tResultYTDDes`)) AS `YTD` FROM (select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,`trk`.`tResultMTD` AS `tResultMTDJan`,`trk`.`tResultYTD` AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumusgrafik` `mrk` left join `tresultgrafik` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 1)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,`trk`.`tResultMTD` AS `tResultMTDfeb`,`trk`.`tResultYTD` AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumusgrafik` `mrk` left join `tresultgrafik` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 2)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,`trk`.`tResultMTD` AS `tResultMTDMar`,`trk`.`tResultYTD` AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumusgrafik` `mrk` left join `tresultgrafik` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 3)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,`trk`.`tResultMTD` AS `tResultMTDApr`,`trk`.`tResultYTD` AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumusgrafik` `mrk` left join `tresultgrafik` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 4)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,`trk`.`tResultMTD` AS `tResultMTDMei`,`trk`.`tResultYTD` AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumusgrafik` `mrk` left join `tresultgrafik` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 5)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,`trk`.`tResultMTD` AS `tResultMTDJun`,`trk`.`tResultYTD` AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumusgrafik` `mrk` left join `tresultgrafik` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 6)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,`trk`.`tResultMTD` AS `tResultMTDJul`,`trk`.`tResultYTD` AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumusgrafik` `mrk` left join `tresultgrafik` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 7)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,`trk`.`tResultMTD` AS `tResultMTDAug`,`trk`.`tResultYTD` AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumusgrafik` `mrk` left join `tresultgrafik` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 8)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,`trk`.`tResultMTD` AS `tResultMTDSep`,`trk`.`tResultYTD` AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumusgrafik` `mrk` left join `tresultgrafik` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 9)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,`trk`.`tResultMTD` AS `tResultMTDOkt`,`trk`.`tResultYTD` AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumusgrafik` `mrk` left join `tresultgrafik` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 10)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,`trk`.`tResultMTD` AS `tResultMTDNov`,`trk`.`tResultYTD` AS `tResultYTDNov`,0 AS `tResultMTDDes`,0 AS `tResultYTDDes` from (`mrumusgrafik` `mrk` left join `tresultgrafik` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 11)) union all select `mrk`.`id` AS `id`,`mrk`.`vKet` AS `vKet`,`trk`.`tYear` AS `tYear`,0 AS `tResultMTDJan`,0 AS `tResultYTDJan`,0 AS `tResultMTDfeb`,0 AS `tResultYTDFeb`,0 AS `tResultMTDMar`,0 AS `tResultYTDMar`,0 AS `tResultMTDApr`,0 AS `tResultYTDApr`,0 AS `tResultMTDMei`,0 AS `tResultYTDMei`,0 AS `tResultMTDJun`,0 AS `tResultYTDJun`,0 AS `tResultMTDJul`,0 AS `tResultYTDJul`,0 AS `tResultMTDAug`,0 AS `tResultYTDAug`,0 AS `tResultMTDSep`,0 AS `tResultYTDSep`,0 AS `tResultMTDOkt`,0 AS `tResultYTDOkt`,0 AS `tResultMTDNov`,0 AS `tResultYTDNov`,`trk`.`tResultMTD` AS `tResultMTDDes`,`trk`.`tResultYTD` AS `tResultYTDDes` from (`mrumusgrafik` `mrk` left join `tresultgrafik` `trk` on(`mrk`.`id` = `trk`.`idRawData` and `trk`.`tMonth` = 12))) AS `a` WHERE `a`.`tYear` is not null GROUP BY `a`.`id`, `a`.`vKet`, `a`.`tYear` ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure for view `vrawdata`
+--
+DROP TABLE IF EXISTS `vrawdata`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vrawdata`  AS SELECT `a`.`id` AS `id`, `a`.`vKet` AS `vKet`, `a`.`dept` AS `dept`, `a`.`tYear` AS `tYear`, sum(`a`.`mJan`) AS `mJan`, sum(`a`.`mFeb`) AS `mFeb`, sum(`a`.`mMar`) AS `mMar`, sum(`a`.`mApr`) AS `mApr`, sum(`a`.`mMei`) AS `mMei`, sum(`a`.`mJun`) AS `mJun`, sum(`a`.`mJul`) AS `mJul`, sum(`a`.`mAug`) AS `mAug`, sum(`a`.`mSep`) AS `mSep`, sum(`a`.`mOct`) AS `mOct`, sum(`a`.`mNov`) AS `mNov`, sum(`a`.`mDec`) AS `mDec` FROM (select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,`b`.`tResult` AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 1)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,`b`.`tResult` AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 2)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,`b`.`tResult` AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 3)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,`b`.`tResult` AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 4)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,`b`.`tResult` AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 5)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,`b`.`tResult` AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 6)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,`b`.`tResult` AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 7)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,`b`.`tResult` AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 8)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,`b`.`tResult` AS `mSep`,0 AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 9)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,`b`.`tResult` AS `mOct`,0 AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 10)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,0 AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,`b`.`tResult` AS `mNov`,0 AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 11)) union all select `a`.`id` AS `id`,`a`.`vKet` AS `vKet`,`a`.`dept` AS `dept`,`b`.`tYear` AS `tYear`,`b`.`tResult` AS `mJan`,0 AS `mFeb`,0 AS `mMar`,0 AS `mApr`,0 AS `mMei`,0 AS `mJun`,0 AS `mJul`,0 AS `mAug`,0 AS `mSep`,0 AS `mOct`,0 AS `mNov`,`b`.`tResult` AS `mDec` from (`mrawdata` `a` left join `tresultrawdata` `b` on(`a`.`id` = `b`.`idRawData` and `b`.`tMonth` = 12))) AS `a` WHERE `a`.`tYear` is not null GROUP BY `a`.`id`, `a`.`vKet`, `a`.`tYear` ;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `activity_log`
+--
+ALTER TABLE `activity_log`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mlogin`
+--
+ALTER TABLE `mlogin`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mrawdata`
+--
+ALTER TABLE `mrawdata`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mrumusgrafik`
+--
+ALTER TABLE `mrumusgrafik`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `mrumuskpi`
+--
+ALTER TABLE `mrumuskpi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tresultgrafik`
+--
+ALTER TABLE `tresultgrafik`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tresultkpi`
+--
+ALTER TABLE `tresultkpi`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tresultrawdata`
+--
+ALTER TABLE `tresultrawdata`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `activity_log`
+--
+ALTER TABLE `activity_log`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `mlogin`
+--
+ALTER TABLE `mlogin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `mrawdata`
+--
+ALTER TABLE `mrawdata`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+
+--
+-- AUTO_INCREMENT for table `mrumusgrafik`
+--
+ALTER TABLE `mrumusgrafik`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `mrumuskpi`
+--
+ALTER TABLE `mrumuskpi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT for table `tresultgrafik`
+--
+ALTER TABLE `tresultgrafik`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+
+--
+-- AUTO_INCREMENT for table `tresultkpi`
+--
+ALTER TABLE `tresultkpi`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1660;
+
+--
+-- AUTO_INCREMENT for table `tresultrawdata`
+--
+ALTER TABLE `tresultrawdata`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1041;
+COMMIT;

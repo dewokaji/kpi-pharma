@@ -1,0 +1,314 @@
+CRITICAL - 2022-05-12 03:00:17 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 03:01:03 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 03:18:46 --> Call to undefined method CodeIgniter\Router\RouteCollection::macth()
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(799): require()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(392): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 03:22:39 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 03:26:53 --> Call to a member function get() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 03:27:42 --> Call to a member function get() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 03:40:34 --> Function name must be a string
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 04:05:25 --> Use of undefined constant console - assumed 'console' (this will throw an Error in a future version of PHP)
+#0 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 29, Array)
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data('$post')
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-12 04:08:34 --> Use of undefined constant console - assumed 'console' (this will throw an Error in a future version of PHP)
+#0 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'C:\\xampp\\htdocs...', 29, Array)
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data('$post')
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-05-12 04:12:42 --> Call to undefined function App\Controllers\debug_to_console()
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data('$post')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 04:19:20 --> Too few arguments to function App\Controllers\Master::input_raw_data(), 0 passed in C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 04:19:36 --> Too few arguments to function App\Controllers\Master::input_raw_data(), 0 passed in C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 04:19:48 --> Too few arguments to function App\Controllers\Master::input_raw_data(), 0 passed in C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 04:20:11 --> Too few arguments to function App\Controllers\Master::input_raw_data(), 0 passed in C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 04:20:32 --> Too few arguments to function App\Controllers\Master::input_raw_data(), 0 passed in C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:18:40 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data('$post')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:20:12 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data('$post')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:22:44 --> Too few arguments to function App\Controllers\Master::input_raw_data(), 0 passed in C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php on line 931 and exactly 1 expected
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:29:14 -->  route cannot be found while reverse-routing.
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(64): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(951): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(40): redirect('Master/input_ra...', 'refresh')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-12 12:30:46 --> Call to undefined method App\Controllers\Master::redirect()
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:32:35 -->  route cannot be found while reverse-routing.
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\HTTP\RedirectResponse.php(64): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidRedirectRoute('')
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\Common.php(951): CodeIgniter\HTTP\RedirectResponse->route(false)
+#2 C:\xampp\htdocs\FIMA\app\Controllers\Master.php(42): redirect('http://localhos...', 'refresh')
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#5 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-05-12 12:34:36 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:35:27 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:35:45 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:35:55 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:36:38 --> Call to a member function post() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:39:07 --> Call to a member function getPost() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:40:43 --> Call to a member function getGetPost() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:41:22 --> Call to a member function getMethod() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:45:33 --> Call to a member function getMethod() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:45:42 --> Call to a member function getMethod() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 12:46:31 --> Call to a member function getPost() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Master->do_input_raw_data()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Master))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 21:53:50 --> Call to a member function getServer() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->generate_report()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 21:56:49 --> Call to a member function getServer() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->generate_report()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 22:03:07 --> Call to a member function getHost() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->generate_report()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 22:19:16 --> Call to undefined function App\Controllers\http_get()
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->generate_report()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 22:21:06 --> Call to a member function getUri() on string
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->generate_report()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 22:21:46 --> Call to a member function getUri() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->generate_report()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 22:23:47 --> Call to a member function getUri() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->generate_report()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 22:25:35 --> file_get_contents(): php_network_getaddresses: getaddrinfo failed: No such host is known. 
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 46, Array)
+#1 C:\xampp\htdocs\FIMA\app\Controllers\Front.php(46): file_get_contents('http://www.goog...', false, Resource id #108)
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->generate_report()
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-05-12 22:26:56 --> file_get_contents() expects parameter 3 to be resource, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 46, Array)
+#1 C:\xampp\htdocs\FIMA\app\Controllers\Front.php(46): file_get_contents('http://172.25.1...', false, 'testing')
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->generate_report()
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-05-12 22:27:22 --> file_get_contents(): php_network_getaddresses: getaddrinfo failed: No such host is known. 
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 46, Array)
+#1 C:\xampp\htdocs\FIMA\app\Controllers\Front.php(46): file_get_contents('http://172.25.1...', false, Resource id #108)
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->generate_report()
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-05-12 22:27:34 --> file_get_contents(): php_network_getaddresses: getaddrinfo failed: No such host is known. 
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 46, Array)
+#1 C:\xampp\htdocs\FIMA\app\Controllers\Front.php(46): file_get_contents('http://172.25.1...', false, Resource id #108)
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->generate_report()
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-05-12 22:28:54 --> file_get_contents(): php_network_getaddresses: getaddrinfo failed: No such host is known. 
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_conten...', 'C:\\xampp\\htdocs...', 46, Array)
+#1 C:\xampp\htdocs\FIMA\app\Controllers\Front.php(46): file_get_contents('http://172.25.1...', true, Resource id #108)
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->generate_report()
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-05-12 22:36:52 --> curl_close() expects exactly 1 parameter, 0 given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'curl_close() ex...', 'C:\\xampp\\htdocs...', 43, Array)
+#1 C:\xampp\htdocs\FIMA\app\Controllers\Front.php(43): curl_close()
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->generate_report()
+#3 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#4 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-05-12 23:34:26 --> Call to a member function helper() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->download_report()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 23:35:43 --> Call to a member function helper() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->download_report()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 23:39:19 --> Call to a member function helper() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->download_report()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-05-12 23:45:31 --> Call to a member function helper() on null
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\Front->download_report()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}

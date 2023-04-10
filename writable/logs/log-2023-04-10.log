@@ -1,0 +1,17 @@
+CRITICAL - 2023-04-10 03:01:14 --> Invalid argument supplied for foreach()
+#0 D:\xampp_new\htdocs\KPI\app\Controllers\CapacityUtil.php(325): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'D:\\xampp_new\\ht...', 325, Array)
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\CapacityUtil->export_excel_util()
+#2 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\CapacityUtil))
+#3 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2023-04-10 03:07:00 --> syntax error, unexpected '41' (T_LNUMBER)
+#0 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(282): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp_new\\ht...')
+#1 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(247): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(888): class_exists('\\App\\Controller...', true)
+#5 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(424): CodeIgniter\CodeIgniter->startController()
+#6 D:\xampp_new\htdocs\KPI\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp_new\htdocs\KPI\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 {main}

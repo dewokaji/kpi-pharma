@@ -1,0 +1,62 @@
+Cofig
+- app/config/App.php
+     public $baseURL = 'http://localhost/KPI/public/';       
+- app/config/Route.php
+    $routes->setDefaultController('Front');
+- home -> Front/index
+       -> view Front/index
+DB
+    - Create mcompany table
+    - mlogin -> add compCode
+
+    transaction & view
+
+    mrawdata -> add compId
+    vrawdata -> add where clause company id
+
+
+
+- add Session Data 
+    before -> user
+    after -> user, compCode
+
+    controller
+    base_url()?>\PageController\verify_login
+
+    Model -> x
+    
+        Login Model -> tble mlogin  (add select compCode)
+
+- Raw Data dan View Raw Data
+    controller
+        Master
+            show_view_input()
+    
+    Model
+
+    DB
+        ViewModel
+        vdataraw
+
+TABEL MRAWDATA -> CLEAR
+TABLE TRESULTRAWDATA -> CLEAR
+
+QUESTIONS
+
+TABLE TRESULTGRAFIK
+TABLE TRESULTKPI
+Kalkulasi nilai tabel dari controler ViewD -> Calculate_kpi
+
+Action by form -> btn Submit
+
+Oracle COnnecting String
+4 Field -> dsn, username, password, conString -> Varchar
+
+TRESULTkpi -> ADD COMPANY id
+TRESULT GRAFIK -> ADD COMPANY id
+RUMUS KPI -> RUMUS -> ADD VAR COMP, STR_RPLACE -> SESSION COMP_ID -> MTD DAN YTD
+RUMUS  -GRAFIK> RUMUS -> ADD VAR COMP, STR_RPLACE -> SESSION COMP_ID -> MTD YTD
+
+ViewDataModel -> vdata_site
+
+Dashboard Chart -> dashboard.apexcharts.init.js

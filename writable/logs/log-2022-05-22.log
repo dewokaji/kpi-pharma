@@ -1,0 +1,18 @@
+CRITICAL - 2022-05-22 20:27:55 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-05-22 20:30:51 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-05-22 20:33:47 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-05-22 21:05:15 --> Maximum execution time of 120 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2022-05-22 21:17:35 --> Call to a member function delete() on array
+#0 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(931): App\Controllers\ViewD->delete_kpi()
+#1 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(439): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ViewD))
+#2 C:\xampp\htdocs\FIMA\vendor\codeigniter4\framework\system\CodeIgniter.php(339): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\FIMA\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#4 {main}
