@@ -168,9 +168,14 @@
                                     <tbody>
                                         <?php
                                         foreach ($datas as $row) {
+                                                /*
                                                 $util_prev2 = util_result($row['lineId'], $row['tYear']-2);
                                                 $util_prev  = util_result($row['lineId'], $row['tYear']-1);
                                                 $util_cur   = util_result($row['lineId'], $row['tYear']);
+                                                */
+                                                $util_prev2 = 0;
+                                                $util_prev  = 0;
+                                                $util_cur   = 0;
                                                 ?>
                                         <tr>
                                             <td>
@@ -287,10 +292,15 @@
                                     </thead>
                                     <tbody>
                                         <?php foreach($datagroup1 as $data1){ 
-
+                                            /*
                                             $util1_prev2 = util_year_group(1, $data1['group1'], $data1['tYear']-2);
                                             $util1_prev  = util_year_group(1, $data1['group1'], $data1['tYear']-1);
-                                            $util1_cur   = util_year_group(1, $data1['group1'], $data1['tYear']);?>
+                                            $util1_cur   = util_year_group(1, $data1['group1'], $data1['tYear']);
+                                            */
+                                            $util1_prev2 = 0;
+                                            $util1_prev  = 0;
+                                            $util1_cur   = 0;
+                                            ?>
                                         <tr>
                                             <td>-</td>
                                             <td style="width: 10%;"><?php echo $data1['group1'] ?></td>
@@ -402,9 +412,14 @@
                                     </thead>
                                     <tbody>
                                         <?php foreach($datagroup2 as $data2){ 
+                                            /*
                                             $util2_prev2 = util_year_group(2, $data2['group2'], $data2['tYear']-2);
                                             $util2_prev  = util_year_group(2, $data2['group2'], $data2['tYear']-1);
                                             $util2_cur   = util_year_group(2, $data2['group2'], $data2['tYear']);
+                                            */
+                                            $util2_prev2 = 0;
+                                            $util2_prev  = 0;
+                                            $util2_cur   = 0;
                                             ?>
                                             
                                         <tr>
