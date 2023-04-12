@@ -16,13 +16,19 @@ class ProdOutput extends BaseController
 
 	public function construct()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
         $db = \Config\Database::connect();
 	}
 
 	public function index()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
+
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'Master']),
 			'page_title' => view('partials/page-title', ['title' => 'Master', 'pagetitle' => 'Master'])
@@ -30,46 +36,46 @@ class ProdOutput extends BaseController
 		return view ('Master/index', $data);
 	}
 
-	//Add By DY
 	public function show_prod_out()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
+
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'View']),
 			'page_title' => view('partials/page-title', ['title' => 'View', 'pagetitle' => 'View'])
 		];
-		// print_r($session->get('dept'));die;
 		$data['tYear'] = $session->get('tYear');
-		//$data['tYear'] = '2022';
 		$data['dept'] = $session->get('dept');
 		$data['compId'] = $session->get('compId');
 		
 		$View = new ViewProdOuputModel();
+
 		if(!$data['tYear'])
 		{
 			$data['tYear'] = '2022';
 		}
-		if ($data['dept'] == 'MSTD')
-		{
-			$data['datas'] = $View->getWhere(['tYear'=>$data['tYear'], 'compId'=>$data['compId']])->getResultArray();
-			$data['datas_prev'] = $View->getWhere(['tYear'=>$data['tYear'] - 1, 'compId'=>$data['compId']])->getResultArray();
-		}
-		else
-		{
-			$data['datas'] = $View->getWhere(['tYear'=>$data['tYear'],'dept'=>$data['dept'], 'compId'=>$data['compId']])->getResultArray();
-			$data['datas_prev'] = $View->getWhere(['tYear'=>$data['tYear']- 1,'dept'=>$data['dept'], 'compId'=>$data['compId']])->getResultArray();
-		}
-		//print_r($View->getLastQuery()->getQuery());
-		//print_r($data['datas']);
+
+		$data['datas'] = $View->getWhere(['tYear'=>$data['tYear'], 'compId'=>$data['compId']])->getResultArray();
+		$data['datas_prev'] = $View->getWhere(['tYear'=>$data['tYear'] - 1, 'compId'=>$data['compId']])->getResultArray();
 
 		return view ('Master/View-Prod-Output', $data);
+
 		
 	}
 
 	public function input_qty()
 	{
-        // Add by DY 14 Mar 23
-		$session = \Config\Services::session($tmonth);
+        $session = \Config\Services::session();
+
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
 
 		$db = \Config\Database::connect();
 		$validation = \Config\Services::validation();
@@ -80,37 +86,19 @@ class ProdOutput extends BaseController
 		$data['pItemId'] = $request->getpost()['product_id'];
 		$data['tMonth'] = $request->getpost()['bulan'];
 		$data['tYear'] = $request->getpost()['product_name'];
-		//$data['tQty'] = $request->getpost()['qty_unit'];
 		$data['dCreate'] = date("Y-m-d h:i:s");
 		$qty_unit = $request->getpost()['qty_unit'];
-
 		$opsi = $request->getpost()['opsi'];
 		
-
-		//print_r($data);
-		
-		echo "<pre>";
-        var_dump($this->request->getVar());
-        echo "</pre>";
-		 	
-		print_r($this->request->getVar('opsi'));
-		
-		
-		// Add By DY 14 Mar 23
 		$data['compId'] = $session->get('compId');
-		//print_r($data);
-		
 
 		if($isDataValid){
 			$result = new ProductionOutputModel();
 			$hasil = $result->getWhere(['pItemId'=>$data['pItemId'],'tMonth'=>$data['tMonth'],'tYear'=>$data['tYear']])->getResultArray();
-			print_r($hasil);
-
+			
 			if($hasil){
 				for ($i=0;$i < count($hasil) ; $i++)
 					{
-						//$result->delete($hasil[$i]['id']);
-						
 						if($opsi == "Budget"){
 							$result->where('id', $hasil[$i]['id'])->set(['pOutputBudget'=> $qty_unit,'dCreate'=> $data['dCreate']])->update();
 
@@ -129,36 +117,24 @@ class ProdOutput extends BaseController
 
 				}
 				$hasil = $result->insert($data);
-				//print_r($data);
-				//print_r($result->getLastQuery()->getQuery());
 			}
-			
-			
-			
-			// $result->delete(['idRawData'=>$data['idRawData']]);
-			//$hasil = $result->insert($data);
-			//print_r($data);
-			//print_r($result->getLastQuery()->getQuery());
-			
 		}
 		else
 		{
 			echo "Ada data yang belum di isi";
 		}
-		//return redirect("ProductionOutput", 'refresh');
+		return redirect("Production-Output", 'refresh');
 		
 	}
 
-
 	public function helper_y_util($lineId= null, $tYear= null){
+
 		$lineUtilModel = new ViewLineUtilModel;
     	$result = $lineUtilModel->get_result_util($lineId, $tYear);
 
 		$tResult = $result[0]['tResult'];
 		$tCapacity	=  $result[0]['tCapacity'];
-		//print_r($tResult);
-		//print_r($tCapacity);
-
+	
 		if($tCapacity == 0){
 			return $util = 0;
 		}else{
@@ -172,7 +148,12 @@ class ProdOutput extends BaseController
 	
 	public function export_excel_prod()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
 		$request = \Config\Services::request();
 		
 		$data = [
@@ -184,9 +165,6 @@ class ProdOutput extends BaseController
 		$yearprev		= $data['tYear'] - 1;
 		$yearprev2		= $data['tYear'] - 2;
 
-		//ViewUtilModel
-		//$viewUtil = new ViewUtilModel();
-		//$data['datas'] = $viewUtil->getWhere(['tYear'=>$data['tYear'],'compId'=>$data['compId']])->getResultArray();
 		$View = new ViewProdOuputModel();
 		$data['datas'] = $View->getWhere(['tYear'=>$data['tYear'], 'compId'=>$data['compId']])->getResultArray();
 		$data['datas_prev'] = $View->getWhere(['tYear'=>$data['tYear'] - 1, 'compId'=>$data['compId']])->getResultArray();

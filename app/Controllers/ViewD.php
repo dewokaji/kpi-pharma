@@ -11,7 +11,12 @@ class ViewD extends BaseController
 {	
 	public function show_kpi_to_target()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
+
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'View']),
 			'page_title' => view('partials/page-title', ['title' => 'View', 'pagetitle' => 'KPI To Target'])
@@ -21,20 +26,24 @@ class ViewD extends BaseController
 		$View = new ViewKPIModel();
 
 		$data['datas'] = $View->getWhere(['tYear'=>$data['tYear']])->getResultArray();
-		// print("<pre>".print_r($session->get('tYear'),true)."</pre>");die;
-
+		
 		return view ('ViewD/KpiToTarget', $data);
 	}
 
 	public function show_dashboard()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'View']),
 			'page_title' => view('partials/page-title', ['title' => 'View', 'pagetitle' => 'Dashboard'])
 		];
 		$data['tMonth'] = $session->get('tMonth');
-		$data['tYear'] = $session->get('tYear');
+		$data['tYear'] = 2022;
 		
 		$View = new ResultKPI();
 		$rawdata = new RawDataResultModel();
@@ -51,14 +60,18 @@ class ViewD extends BaseController
 			$data['datas'] = $View->getWhere(['tMonth'=>$data['tMonth'],'tYear'=>$data['tYear']])->getResultArray();
 		}
 		
-		// print("<pre>".print_r($data['rawdata'],true)."</pre>");die;
-		
 		return view ('ViewD/Dashboard', $data);
 	}
 
 	public function calculate_kpi()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
+
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'View']),
 			'page_title' => view('partials/page-title', ['title' => 'View', 'pagetitle' => 'Dashboard'])
@@ -71,23 +84,16 @@ class ViewD extends BaseController
 		$data['tMonth'] = $date[1];
 		$session->set('tYear',$data['tYear']);
 		$session->set('tMonth',$data['tMonth']);
-		// Add By DY 14 Mar 23
 		$data['compId'] = $session->get('compId');
-		//print_r($data['compId']);
 		
-
 		$cek = new ResultKPI();
 		$hasilcek = $cek->getWhere(['tMonth'=>$data['tMonth'],'tYear'=>$data['tYear'],'compId'=>$data['compId']])->getResultArray();
-		//print_r($hasilcek);
-		//print_r($cek->getLastQuery()->getQuery());
 		
 		if(count($hasilcek) == 0)
 		{
 			$RumusModel = new RumusKPI();
 			$RumusModel->select('id,mRumusMTD,mRumusYTD');
 			$hasil = $RumusModel->get()->getResultArray();
-			//print_r($hasil);
-			//print_r($RumusModel->getLastQuery()->getQuery());
 			
 			$count = count($hasil);
 			for($i=0;$i < $count;$i++)
@@ -97,16 +103,13 @@ class ViewD extends BaseController
 				$queryYTD = $hasil[$i]['mRumusYTD'];
 				$queryMTD = str_replace('bulan',$data['tMonth'],$queryMTD);
 				$queryMTD = str_replace('tahun',$data['tYear'],$queryMTD);
-				// Add By DY 14 Mar 23
 				$queryMTD = str_replace('site',$data['compId'],$queryMTD);
 				$queryYTD = str_replace('site',$data['compId'],$queryYTD);
 
 				$queryYTD = str_replace('bulan',$data['tMonth'],$queryYTD);
 				$queryYTD = str_replace('tahun',$data['tYear'],$queryYTD);
-				//print_r($queryMTD);die;
-                
+				
 				$result = $db->query($queryMTD)->getResultArray();
-				//print_r($db->getLastQuery()->getQuery());
 				
 				$data['tResultMTD'] = $result[0]['result'];
 				if($data['tResultMTD'] == NULL)
@@ -122,8 +125,6 @@ class ViewD extends BaseController
 				$data['dCreate'] = date("Y-m-d h:i:s");
 				$ResultKPI = new ResultKPI();
 				$result = $ResultKPI->insert($data);
-				//print_r($data);
-				//print_r($ResultKPI->getLastQuery()->getQuery());
 				
 			}
 			
@@ -133,7 +134,6 @@ class ViewD extends BaseController
 		$graph = new RumusGrafikModel();
 		$graph->select('id,mRumusMTD,mRumusYTD');
 		$hasil = $graph->get()->getResultArray();
-		// print("<pre>".print_r($hasil,true)."</pre>");die;
 		$count = count($hasil);
 		
 		$ResultGrafikModel = new ResultGrafikModel();
@@ -148,15 +148,11 @@ class ViewD extends BaseController
 				$queryYTD = $hasil[$i]['mRumusYTD'];
 				$queryMTD = str_replace('bulan',$data['tMonth'],$queryMTD);
 				$queryMTD = str_replace('tahun',$data['tYear'],$queryMTD);
-				//Add by DY 15 Mar 23
 				$queryMTD = str_replace('site',$data['compId'],$queryMTD);
 				$queryYTD = str_replace('site',$data['compId'],$queryYTD);
 
 				$queryYTD = str_replace('bulan',$data['tMonth'],$queryYTD);
 				$queryYTD = str_replace('tahun',$data['tYear'],$queryYTD);
-				//$result = $db->query($queryMTD)->getResultArray();
-				//print_r($queryMTD);
-				//print_r($queryYTD);
 				
 				$data['tResultMTD'] = $result[0]['result'];
 				if($data['tResultMTD'] == NULL)
@@ -164,8 +160,6 @@ class ViewD extends BaseController
 					$data['tResultMTD'] = 0;
 				}
 				$result = $db->query($queryYTD)->getResultArray();
-				//print_r($result);
-				//print_r($db->getLastQuery()->getQuery());
 				
 				$data['tResultYTD'] = $result[0]['result'];
 				if($data['tResultYTD'] == NULL)
@@ -174,30 +168,23 @@ class ViewD extends BaseController
 				}
 				$data['dCreate'] = date("Y-m-d h:i:s");
 				$ResultGrafikModel = new ResultGrafikModel();
-				//print_r($data);
-				
-				//$result = $db->query($queryMTD)->getResultArray();
 				$result = $ResultGrafikModel->insert($data);
-				//print_r($ResultGrafikModel->getLastQuery()->getQuery());
 				
 			}
 		}
-		
 
-		// $View = new ResultKPI();
-		// $data['datas'] = $View->getWhere(['tMonth'=>$data['tMonth'],'tYear'=>$data['tYear']])->getResultArray();
-		// die;
-
-		return redirect('Dashboard','refresh');
-
-		// return redirect()->to('Dashboard');
-		
+		return redirect('Dashboard','refresh');		
 
 	}
 
 	public function delete_kpi()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
+
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'View']),
 			'page_title' => view('partials/page-title', ['title' => 'View', 'pagetitle' => 'Dashboard'])
@@ -224,6 +211,11 @@ class ViewD extends BaseController
 	public function export_excel_kpi()
 	{
 		$session = \Config\Services::session($tmonth);
+
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'View']),
 			'page_title' => view('partials/page-title', ['title' => 'View', 'pagetitle' => 'Dashboard'])
@@ -280,7 +272,11 @@ class ViewD extends BaseController
 
 	public function export_excel()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'View']),
 			'page_title' => view('partials/page-title', ['title' => 'View', 'pagetitle' => 'Dashboard'])

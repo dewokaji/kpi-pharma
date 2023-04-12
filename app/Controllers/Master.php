@@ -20,7 +20,13 @@ class Master extends BaseController
 
 	public function index()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
+
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'Master']),
 			'page_title' => view('partials/page-title', ['title' => 'Master', 'pagetitle' => 'Master'])
@@ -30,17 +36,19 @@ class Master extends BaseController
 
 	public function show_view_input()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
+		
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'View']),
 			'page_title' => view('partials/page-title', ['title' => 'View', 'pagetitle' => 'View'])
 		];
-		// print_r($session->get('dept'));die;
 		$data['tYear'] = $session->get('tYear');
 		$data['dept'] = $session->get('dept');
-		//Add by DY
 		$data['compId'] = $session->get('compId');
-		//print_r($data);die;
 		
 		
 		$View = new ViewModel();
@@ -50,20 +58,10 @@ class Master extends BaseController
 		}
 		if ($data['dept'] == 'MSTD')
 		{
-			//$data['datas'] = $View->getWhere(['tYear'=>$data['tYear']])->getResultArray();
-			//Add by DY
 			$data['datas'] = $View->getWhere(['tYear'=>$data['tYear'], 'compId'=>$data['compId']])->getResultArray();
-			//$data['datas'] = $View->getWhere(['tYear'=>$data['tYear']], ['compId'=>$data['compId']4]])->getResultArray();
-		}
-		else
-		{
-			// print_r($data);die;
-			//$data['datas'] = $View->getWhere(['tYear'=>$data['tYear'],'dept'=>$data['dept']])->getResultArray();
-			// Add by DY
+		}else{
 			$data['datas'] = $View->getWhere(['tYear'=>$data['tYear'],'dept'=>$data['dept'], 'compId'=>$data['compId']])->getResultArray();
-			// print_r($data['datas']);
 		}
-		//print_r($View->getLastQuery()->getQuery());
 		return view ('Master/View-Input', $data);
 		
 	}
@@ -82,10 +80,6 @@ class Master extends BaseController
 		$data['iUsed'] = 1;
 		$data['dCreate'] = date("Y-m-d h:i:s");
 		
-		// $cek['products'] = $this->db->table($this->table)->select('dept,vket')->get()->getResult();
-		// print_r($cek);
-
-		// die;
 		if ($isDataValid){
 			$MasterModel = new MasterModel();
 
@@ -102,8 +96,12 @@ class Master extends BaseController
 
 	public function input_detail()
 	{
-        // Add by DY 14 Mar 23
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
 
 		$db = \Config\Database::connect();
 		$validation = \Config\Services::validation();
@@ -142,7 +140,12 @@ class Master extends BaseController
 	
 	public function export_excel_raw()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
+
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'View']),
 			'page_title' => view('partials/page-title', ['title' => 'View', 'pagetitle' => 'Dashboard'])
@@ -160,7 +163,6 @@ class Master extends BaseController
 		{
 			$data['datas'] = $rawresult->getWhere(['tYear'=>$data['tYear'],'dept'=>$data['dept']])->getResultArray();
 		}
-		// print("<pre>".print_r($data['datas'],true)."</pre>");die;
 		
 		$date = date("dmY");
 		header("Content-type: application/vnd-ms-excel");

@@ -2,30 +2,23 @@
     <div class="navbar-header">
         <div class="d-flex" >
             <!-- LOGO -->
-            <?php $session = \Config\Services::session(); 
-            //print_r($session->get());
-                //$session->get('compImgPath');
-                ?>
+            <?php $session = \Config\Services::session(); ?>
                 
             <div class="navbar-brand-box"style="background-color:#ffffff">
                 <a href="/" class="logo logo-dark">
                     <span class="logo-sm">
-                        <!--<img src="assets/images/fima_vector.png" alt="" height="22">-->
                         <img src="<?= $session->get('compImgPath') ?>" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <!--<img src="assets/images/fima_vector.png" alt="" height="17">-->
                         <img src="<?= $session->get('compImgPath') ?>" alt="" height="17">
                     </span>
                 </a>
 
                 <a href="/" class="logo logo-light">
                     <span class="logo-sm">
-                        <!--<img src="assets/images/fima_vector.png" alt="" height="22">-->
                         <img src="<?= $session->get('compImgPath') ?>" alt="" height="22">
                     </span>
                     <span class="logo-lg">
-                        <!--<img src="assets/images/fima_vector.png" alt="" height="50">-->
                         <img src="<?= $session->get('compImgPath') ?>" alt="" height="70">
                     </span>
                 </a>
@@ -41,15 +34,10 @@
             <div class="dropdown d-inline-block">
                 
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <!-- <img class="rounded-circle header-profile-user" src="assets/images/companies/img-1.png" alt="Header Avatar">-->
-                    <img class="rounded-circle header-profile-user" src="assets/images/companies/user.png" alt="Header Avatar">
-                    
-                    <!--<span class="d-none d-xl-inline-block ms-1" key="t-henry">Menu</span>-->
+                    <img class="rounded-circle header-profile-user" src="assets/images/companies/img-1.png" alt="Header Avatar">
                     <span class="d-none d-xl-inline-block ms-1" key="t-henry"><?= $session->get('namaUser') ?></span>
                     <i class="mdi mdi-chevron-down d-none d-xl-inline-block"></i>
-                    
-                    <!--<input type="hidden" value="<?php echo $user ?>">-->
-                    
+
                     
                 </button>
                 <div class="dropdown-menu dropdown-menu-end">

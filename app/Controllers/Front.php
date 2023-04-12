@@ -12,9 +12,12 @@ class Front extends BaseController
 {
 	public function index()
 	{
-		$session = \Config\Services::session($tmonth);
-		//print("<pre>".print_r($session->get('compId'),true)."</pre>");die;
-		
+		$session = \Config\Services::session();
+
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
 		
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'Dashboard']),
@@ -22,10 +25,8 @@ class Front extends BaseController
 		];
 		$data['dept'] = $session->get('dept');
 		//$data['tYear'] = $session->get('tYear');
-		// CEK IT
 		$data['tYear'] = 2022;
 		$data['tMonth'] = $session->get('tMonth');
-		//Add by Dy 07 mar 23
 		$data['compId'] = $session->get('compId');
 		$data['compCode'] = $session->get('compCode');
 		$data['compName'] = $session->get('compName');
@@ -48,27 +49,15 @@ class Front extends BaseController
 		}else{
 			$data['tMonth2'] = $data['tMonth'] - 2;
 		}
-		// print("<pre>".print_r($data['tMonth1'],true)."</pre>");die;
+		
 		$unit = new ViewResultGrafikModel();
-		//$data['datau'] = $unit->getWhere(['tYear'=>$data['tYear'],'tMonth'=>$data['tMonth']])->getResultArray();
-		//Add by Dy 20 mar 23
 		$data['datau'] = $unit->getWhere(['tYear'=>$data['tYear'],'tMonth'=>$data['tMonth'],'compId'=>$data['compId']])->getResultArray();
-		//print_r($data['datau']);
-		//print_r($unit->getLastQuery()->getQuery());
 		
 		$kpi = new ViewKPIDataModel();
-		//$data['datas'] = $kpi->getWhere(['tYear'=>$data['tYear']])->getResultArray();
-		//Add by Dy 20 mar 23
 		$data['datas'] = $kpi->getWhere(['tYear'=>$data['tYear'],'compId'=>$data['compId']])->getResultArray();
-		//print_r($data['datas']);
-		//print_r($kpi->getLastQuery()->getQuery());
-		
+
 		$rawdata = new ViewDataModel();
-		//$data['datag'] = $rawdata->getWhere(['tYear'=>$data['tYear']])->getResultArray();
-		//Add by DY
 		$data['datag'] = $rawdata->getWhere(['tYear'=>$data['tYear'],'compId'=>$data['compId']])->getResultArray();
-		//print_r($data['datag']);
-		//print_r($rawdata->getLastQuery()->getQuery());
 		
 		$category = new MasterModel();
 		$data['C'] = $category->getWhere(['vCategory'=>'C'])->getResultArray();
@@ -78,41 +67,16 @@ class Front extends BaseController
 		$data['Q'] = $category->getWhere(['vCategory'=>'Q'])->getResultArray();
 		
 		$rawdataresult = new RawDataResultModel();
-		// Add by DY
-		//$data['dataraw1'] = $rawdataresult->getWhere(['tYear'=>$data['tYear'],'tMonth'=>$data['tMonth']])->getResultArray();
 		$data['dataraw1'] = $rawdataresult->getWhere(['tYear'=>$data['tYear'],'tMonth'=>$data['tMonth'],'compId'=>$data['compId']])->getResultArray();
-		//print_r($data['dataraw1']);
-		//print_r($rawdataresult->getLastQuery()->getQuery());
-		// Add by DY
-		//$data['dataraw2'] = $rawdataresult->getWhere(['tYear'=>$data['tYear'],'tMonth'=>$data['tMonth1']])->getResultArray();
 		$data['dataraw2'] = $rawdataresult->getWhere(['tYear'=>$data['tYear'],'tMonth'=>$data['tMonth1'],'compId'=>$data['compId']])->getResultArray();
-		//print_r($data['dataraw2']);
-		//print_r($rawdataresult->getLastQuery()->getQuery());
-
+		
 		$rawkpi = new ResultKPI();
-		//Add by DY
-		//$data['datarawkpi'] = $rawkpi->getWhere(['tYear'=>$data['tYear'],'tMonth'=>$data['tMonth']])->getResultArray();
 		$data['datarawkpi'] = $rawkpi->getWhere(['tYear'=>$data['tYear'],'tMonth'=>$data['tMonth'],'compId'=>$data['compId']])->getResultArray();
-		//print_r($data['datarawkpi']);
-		//print_r($rawkpi->getLastQuery()->getQuery());
 		
 		$rawgrafik = new ResultGrafikModel();
-		//Add by DY
-		//$data['datarawgrafik'] = $rawgrafik->getWhere(['tYear'=>$data['tYear'],'tMonth'=>$data['tMonth']])->getResultArray();
 		$data['datarawgrafik'] = $rawgrafik->getWhere(['tYear'=>$data['tYear'],'tMonth'=>$data['tMonth'],'compId'=>$data['compId']])->getResultArray();
-		//print_r($data['datarawgrafik']);
-		//print_r($rawgrafik->getLastQuery()->getQuery());
-		// print("<pre>".print_r($data['dataraw2'],true)."</pre>");die;
-
-
-		if(!$session->get('user'))
-		{
-			return view('auth/auth-login');
-		}
-		else
-		{
-			return view('Front/index', $data);
-		}
+		
+		return view('Front/index', $data);
 		
 	}
 

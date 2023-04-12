@@ -4,8 +4,6 @@ use CodeIgniter\Model;
 
 class ViewProdOuputModel extends Model{
 
-    //protected $table = "vrawdata";
-    //protected $table = "vresult_util";
     protected $table = "vresult_prod_output";
     protected $db;
     protected $allowedFields = [''];

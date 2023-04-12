@@ -3,8 +3,6 @@
 
 <head>
 
-    <?= $title_meta ?>
-
     <?= $this->include('partials/head-css') ?>
 
 </head>

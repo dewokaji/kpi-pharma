@@ -4,8 +4,6 @@ use CodeIgniter\Model;
 
 class ViewUtilModel extends Model{
 
-    //protected $table = "vrawdata";
-    //protected $table = "vresult_util";
     protected $table = "vresult_util_detail";
     protected $db;
     protected $allowedFields = [''];

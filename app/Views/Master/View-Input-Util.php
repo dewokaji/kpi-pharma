@@ -32,33 +32,15 @@
             background-color: #556ee6;
             color: #fff;
         }
-        
-        /*div.dt-button-collection button.dt-button.active {
-            background: linear-gradient(to bottom, #50a5f1 0%, #556ee6 100%) !importants;
-            #f0f0f0
-            /*background-color: rgba(0, 0, 0, 0);
-            background-position-x: 0%;
-            background-position-y: 0%;
-            background-repeat: repeat;
-            background-attachment: scroll;
-            background-image: linear-gradient(rgb(240, 240, 240) 0%, rgb(218, 218, 218) 100%);
-            background-size: auto;
-            background-origin: padding-box;
-            background-clip: border-box;
-        }*/
-        /*.dt-buttons .dt-button-collection {
-            margin: 5px 0 !important;
-            }*/
 
-            .dt-button.buttons-columnVisibility {
+        .dt-button.buttons-columnVisibility {
             background-color: #50a5f1;
-            /*background-color: linear-gradient(to bottom, #50a5f1 0%, #556ee6 100%);*/
             color: white;
-            }
+        }
 
-            .dt-button.buttons-columnVisibility.active {
+        .dt-button.buttons-columnVisibility.active {
             background-color: green;
-            }
+        }
 
         .dt-button-collection button.dt-button.active {
             background-color: linear-gradient(to bottom, blue 0%, blue 100%);
@@ -96,7 +78,6 @@
                                             <label for="tYear" class="col-sm-3 col-form-label">Tahun </label>
                                             <div class="col-sm-3">
                                                 
-                                                <!--<input type="month" class="form-control" id="tgl_berlaku" name="tgl_berlaku" value="<?php echo $tYear."-".$tMonth?>" >-->
                                                 <select id="tYear" name="tYear" class="form-select">
                                                     <option value="" selected>Choose...</option>
                                                     <option value="2021">2021</option>
@@ -112,11 +93,6 @@
                                                     <button type="submit" class="btn btn-primary w-md">To Excel</button>
                                                 </div>
                                             </div>
-                                            <!--<div class="col-sm-2">
-                                                <div>
-                                                    <a href="delete-kpi" class="btn btn-primary w-md">Upload Data</a>
-                                                </div>
-                                            </div>-->
                                             
                                         </div>
                                         </form>
@@ -210,7 +186,7 @@
                                                 <?= number_format(($row['mJan'] / max($row['mJan2'], 1) * 100),2) ?></td>
                                             <td><?= number_format($row['mJan2'],2) ?></td>
                                             <td><?= number_format($row['mJan'],2) ?></td>
-                                            <td <?= colour_min ($row['mfeb'] / max($row['mFeb2'], 1)) ?>>
+                                            <td <?= colour_min ($row['mFeb'] / max($row['mFeb2'], 1)) ?>>
                                                 <?= number_format(($row['mFeb'] / max($row['mFeb2'], 1) * 100),2) ?></td>
                                             <td><?= number_format($row['mFeb2'],2) ?></td>
                                             <td><?= number_format($row['mFeb'],2) ?></td>
@@ -250,8 +226,8 @@
                                                 <?= number_format(($row['mNov'] / max($row['mNov2'], 1) * 100),2) ?></td>
                                             <td><?= number_format($row['mNov2'],2) ?></td>
                                             <td><?= number_format($row['mNov'],2) ?></td>
-                                            <td <?= colour_min ($row['mDes'] / max($row['mDes2'], 1)) ?>>
-                                                <?= number_format(($row['mDes'] / max($row['mDes2'], 1) * 100),2) ?></td>
+                                            <td <?= colour_min ($row['mDec'] / max($row['mDec2'], 1)) ?>>
+                                                <?= number_format(($row['mDec'] / max($row['mDec2'], 1) * 100),2) ?></td>
                                             <td><?= number_format($row['mDec2'],2) ?></td>
                                             <td><?= number_format($row['mDec'],2) ?></td>
                                             
@@ -325,7 +301,7 @@
                                                 <?= number_format(($data1['mJan'] / max($data1['mJan2'], 1) * 100),2) ?></td>
                                             <td><?= number_format($data1['mJan2'],2) ?></td>
                                             <td><?= number_format($data1['mJan'],2) ?></td>
-                                            <td <?= colour_min ($data1['mfeb'] / max($data1['mFeb2'], 1)) ?>>
+                                            <td <?= colour_min ($data1['mFeb'] / max($data1['mFeb2'], 1)) ?>>
                                                 <?= number_format(($data1['mFeb'] / max($data1['mFeb2'], 1) * 100),2) ?></td>
                                             <td><?= number_format($data1['mFeb2'],2) ?></td>
                                             <td><?= number_format($data1['mFeb'],2) ?></td>
@@ -365,8 +341,8 @@
                                                 <?= number_format(($data1['mNov'] / max($data1['mNov2'], 1) * 100),2) ?></td>
                                             <td><?= number_format($data1['mNov2'],2) ?></td>
                                             <td><?= number_format($data1['mNov'],2) ?></td>
-                                            <td <?= colour_min ($data1['mDes'] / max($data1['mDes2'], 1)) ?>>
-                                                <?= number_format(($data1['mDes'] / max($data1['mDes2'], 1) * 100),2) ?></td>
+                                            <td <?= colour_min ($data1['mDec'] / max($data1['mDec2'], 1)) ?>>
+                                                <?= number_format(($data1['mDec'] / max($data1['mDec2'], 1) * 100),2) ?></td>
                                             <td><?= number_format($data1['mDec2'],2) ?></td>
                                             <td><?= number_format($data1['mDec'],2) ?></td>
                                         </tr>
@@ -481,8 +457,8 @@
                                                 <?= number_format(($data2['mNov'] / max($data2['mNov2'], 1) * 100),2) ?></td>
                                             <td><?= number_format($data2['mNov2'],2) ?></td>
                                             <td><?= number_format($data2['mNov'],2) ?></td>
-                                            <td <?= colour_min ($data2['mDes'] / max($data2['mDes2'], 1)) ?>>
-                                                <?= number_format(($data2['mDes'] / max($data2['mDes2'], 1) * 100),2) ?></td>
+                                            <td <?= colour_min ($data2['mDec'] / max($data2['mDec2'], 1)) ?>>
+                                                <?= number_format(($data2['mDec'] / max($data2['mDec2'], 1) * 100),2) ?></td>
                                             <td><?= number_format($data2['mDec2'],2) ?></td>
                                             <td><?= number_format($data2['mDec'],2) ?></td>
                                         </tr>

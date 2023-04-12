@@ -4,9 +4,6 @@ use CodeIgniter\Model;
 
 class ViewLineUtilModel extends Model{
 
-    //protected $table      = 'vline_result_util';
-    //protected $allowedFields = ['tUtil'];
-
     public function _construct()
     {
         $this->db = \Config\Database::connect();

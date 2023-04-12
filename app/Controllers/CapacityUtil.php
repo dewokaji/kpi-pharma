@@ -19,31 +19,24 @@ class CapacityUtil extends BaseController
 
 	public function construct()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
         $db = \Config\Database::connect();
 	}
 
-	public function index()
-	{
-		$session = \Config\Services::session($tmonth);
-		$data = [
-			'title_meta' => view('partials/title-meta', ['title' => 'Master']),
-			'page_title' => view('partials/page-title', ['title' => 'Master', 'pagetitle' => 'Master'])
-		];
-		return view ('Master/index', $data);
-	}
-
-	//Add By DY
 	public function show_cap_util()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
+
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'View']),
 			'page_title' => view('partials/page-title', ['title' => 'View', 'pagetitle' => 'View'])
 		];
-		// print_r($session->get('dept'));die;
 		$data['tYear'] = $session->get('tYear');
-		//$data['tYear'] = '2022';
 		$data['dept'] = $session->get('dept');
 		$data['compId'] = $session->get('compId');
 		
@@ -64,20 +57,18 @@ class CapacityUtil extends BaseController
 		{
 			$data['datas'] = $View->getWhere(['tYear'=>$data['tYear'],'dept'=>$data['dept'], 'compId'=>$data['compId']])->getResultArray();
 		}
-		//print_r($View->getLastQuery()->getQuery());
-
+		
 		return view ('Master/View-Input-Util', $data);
 		
 	}
 
 	public function helper_y_util($lineId= null, $tYear= null){
+
 		$lineUtilModel = new ViewLineUtilModel;
     	$result = $lineUtilModel->get_result_util($lineId, $tYear);
 
 		$tResult = $result[0]['tResult'];
 		$tCapacity	=  $result[0]['tCapacity'];
-		//print_r($tResult);
-		//print_r($tCapacity);
 
 		if($tCapacity == 0){
 			return $util = 0;
@@ -112,11 +103,16 @@ class CapacityUtil extends BaseController
 	
 	public function input_detail()
 	{
-        // Add by DY 14 Mar 23
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
+
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
 
 		$db = \Config\Database::connect();
 		$validation = \Config\Services::validation();
+
 		$validation->setRules(['product_id'=>'required','product_name'=>'required']);
 		$isDataValid = $validation->withRequest(\Config\Services::request())->run();
 
@@ -128,38 +124,37 @@ class CapacityUtil extends BaseController
 		$data['tResult'] = $request->getpost()['actual_output'];
 		$data['dCreate'] = date("Y-m-d h:i:s");
 
-		// Add By DY 14 Mar 23
 		$data['compId'] = $session->get('compId');
-		//print_r($data);
 		
 
 		if($isDataValid){
 			$result = new CapacityUtilModel();
 			$hasil = $result->getWhere(['lineId'=>$data['lineId'],'tMonth'=>$data['tMonth'],'tYear'=>$data['tYear']])->getResultArray();
-			//print_r($hasil);
 			
 			for ($i=0;$i < count($hasil) ; $i++)
 			{
 				$result->delete($hasil[$i]['id']);
 			}
-			// $result->delete(['idRawData'=>$data['idRawData']]);
+
 			$hasil = $result->insert($data);
-			//print_r($result->getLastQuery()->getQuery());
 			
-		}
-		else
-		{
+		}else{
 			echo "Ada data yang belum di isi";
 		}
-		return redirect("CapacityUtil", 'refresh');
+		return redirect("Capacity-Util", 'refresh');
 		
 	}
 
 	
 	public function export_excel_util()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
 		$request = \Config\Services::request();
+
+		if(!$session->get('user'))
+		{
+			return view('auth/auth-login');
+		}
 		
 		$data = [
 			'title_meta' => view('partials/title-meta', ['title' => 'View']),

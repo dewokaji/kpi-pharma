@@ -80,11 +80,6 @@
                                                     <button type="submit" class="btn btn-primary w-md">To Excel</button>
                                                 </div>
                                             </div>
-                                            <!--<div class="col-sm-2">
-                                                <div>
-                                                    <a href="delete-kpi" class="btn btn-primary w-md">Upload Data</a>
-                                                </div>
-                                            </div>-->
                                             
                                         </div>
                                         </form>
@@ -142,7 +137,7 @@
                                                 ?>
                                         <tr>
                                             <td>
-                                                <a href="#" id="edit_budget" class="btn btn-primary btn-sm btn-rounded editBudjet" data-id="<?php echo $row['pItemId'] ?>" data-vket="<?php echo $row['pItemName']?>" data-year="<?php echo $row['tYear'] ?>" data-opsi="Budget">
+                                                <a href="#" id="edit_budget" class="btn btn-primary btn-sm btn-rounded edit_budget" data-id="<?php echo $row['pItemId'] ?>" data-vket="<?php echo $row['pItemName']?>" data-year="<?php echo $row['tYear'] ?>" data-opsi="Budget">
                                                 <i class="bx bx-pencil"></i>
                                                 </a>
                                             </td>
@@ -250,7 +245,7 @@
                                         
                                         <tr>
                                             <td>
-                                                <a href="#" id="edit_actual" class="btn btn-primary btn-sm btn-rounded editActual" data-id="<?php echo $row['pItemId'] ?>" data-vket="<?php echo $row['pItemName']?>" data-year="<?php echo $row['tYear'] ?>" data-opsi="Actual">
+                                                <a href="#" id="edit_actual" class="btn btn-primary btn-sm btn-rounded edit_budget" data-id="<?php echo $row['pItemId'] ?>" data-vket="<?php echo $row['pItemName']?>" data-year="<?php echo $row['tYear'] ?>" data-opsi="Actual">
                                                 <i class="bx bx-pencil"></i>
                                                 </a>
                                             </td>
@@ -397,6 +392,68 @@
             </div>
         </form>
         <!-- end modal -->
+        <!-- start Modal -->
+        <form action="<?php echo base_url() ?>/ProdOutput/input_qty" method="post">
+            <div class="modal fade orderdetailsModal" id="modalView2" tabindex="-1" role="dialog" aria-labelledby=orderdetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="orderdetailsModalLabel">Details</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="mb-2"> 
+                                <span class="text-primary"><label for="" id="lblopsi" class="col-sm-8 col-form-label opsi"></label>
+                                    <input type="hidden" class="opsi" name="opsi" id="opsi"/>
+                                </span>
+                            </p>
+                            <p class="mb-2">Data: 
+                                <span class="text-primary"><label for="" id="lblname" class="col-sm-8 col-form-label product_id"></label>
+                                <input type="hidden" class="product_id" name="product_id" id="product_id"/></span></p>
+                            
+                            <p class="mb-4">Tahun: 
+                                <span class="text-primary"><label for="" id="lblyear" class="col-sm-3 col-form-label product_name"></label>
+                                <input type="hidden" class="product_name" name="product_name" id="product_name"/></span></p>
+                            <div class="row mb-4">
+                                <label for="horizontal-email-input" class="col-sm-3 col-form-label">Bulan</label>
+                                <div class="col-sm-9">
+                                    <select id="formrow-inputState" name="bulan" class="form-select" required>
+                                        <option selected>Choose...</option>
+                                        <option value="1">Januari</option>
+                                        <option value="2">Februari</option>
+                                        <option value="3">Maret</option>
+                                        <option value="4">April</option>
+                                        <option value="5">Mei</option>
+                                        <option value="6">Juni</option>
+                                        <option value="7">Juli</option>
+                                        <option value="8">Agustus</option>
+                                        <option value="9">September</option>
+                                        <option value="10">Oktober</option>
+                                        <option value="11">November</option>
+                                        <option value="12">Desember</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <label for="horizontal-password-input" class="col-sm-3 col-form-label">Quantity Unit</label>
+                                <div class="col-sm-9">
+                                    <input type="Number" class="form-control" id="qty_unit" name="qty_unit" placeholder="Input Quantity Unit" step="0.001">
+                                </div>
+                            </div>
+                            
+                            <div class="row justify-content-end">
+                                <div class="col-sm-9">
+                                    <div>
+                                        <button type="submit" class="btn btn-primary w-md">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <!-- end modal -->
 
         
         <?= $this->include('partials/footer') ?>
@@ -446,7 +503,7 @@
 <!-- Action kelola Budget -->
 <script>
     $(document).ready(function(){
-        $('.editBudjet').on('click',function(){
+        $('.edit_budget').on('click',function(){
             // get data from button edit
             const id = $(this).data('id');
             const year = $(this).data('year');
@@ -459,7 +516,7 @@
             document.getElementById('lblname').innerText = vket;
             document.getElementById('lblyear').innerText = year;
             document.getElementById('lblopsi').innerText = 'Kelola data Production Output in Unit ' +opsi;
-            $('#modalView').modal('show');
+            $('#modalView2').modal('show');
         });
 
     });
@@ -469,7 +526,7 @@
 <script>
     
     $(document).ready(function(){
-        $('.editActual').on('click',function(){
+        $('.edit_actual').on('click',function(){
             // get data from button edit
             const id = $(this).data('id');
             const year = $(this).data('year');

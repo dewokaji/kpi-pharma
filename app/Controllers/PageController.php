@@ -18,8 +18,8 @@ class PageController extends BaseController
 
 	public function verify_login()
 	{
-		$session = \Config\Services::session($tmonth);
-		//$session = \Config\Services::session();
+		$session = \Config\Services::session();
+
 		$session->start();
 		$data = ['title_meta' => view('partials/title-meta', ['title'=>'Login'])];
 		
@@ -30,12 +30,7 @@ class PageController extends BaseController
 
 		$LoginModel = new LoginModel();
 		//$hasil = $LoginModel->getWhere(['email'=>$data['user'],'mpassword'=>$data['mpassword']])->getResultArray();
-		// add by DY 07 Mar 2023
-		$hasil	= $LoginModel->getLogin($userName= $data['user'],$password= $data['mpassword']);
-		//print_r($LoginModel->getLastQuery()->getQuery());
-		//print_r($hasil);die;
-		
-		
+		$hasil	= $LoginModel->getLogin($userName= $data['user'],$password= $data['mpassword']);		
 		$data['dept'] = $hasil[0]['dept'];
 		$data['tYear'] = date('Y');
 		$data['tMonth'] = date('m');
@@ -44,8 +39,6 @@ class PageController extends BaseController
 		$data['compName'] = $hasil[0]['compName'];
 		$data['compImgPath'] = $hasil[0]['compImgPath'];
 		$data['namaUser'] = $hasil[0]['namaUser'];
-		//print_r($data);die;
-		//print_r($data);die;
 		
 		if(count($hasil) >= 1)
 		{
@@ -53,14 +46,12 @@ class PageController extends BaseController
 			$session->set('dept',$data['dept']);
 			$session->set('tYear',$data['tYear']);
 			$session->set('tMonth',$data['tMonth']);
-			// add by DY 07 Mar 2023
 			$session->set('namaUser',$data['namaUser']);
 			$session->set('compId',$data['compId']);
 			$session->set('compCode',$data['compCode']);
 			$session->set('compName',$data['compName']);
 			$session->set('compImgPath',$data['compImgPath']);
-			//print_r($data);
-			//print_r($session->get());die;
+
 			return redirect("home",'refresh');
 		}
 		else
@@ -69,14 +60,11 @@ class PageController extends BaseController
 		}
 		
 
-		// print_r($hasil);die;
-
-
 	}
 
 	public function verify_register()
 	{
-		$session = \Config\Services::session($tmonth);
+		$session = \Config\Services::session();
 		$data = ['title_meta' => view('partials/title-meta', ['title'=>'Login'])];
 		
 		$request = \Config\Services::request();

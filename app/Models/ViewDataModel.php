@@ -5,8 +5,7 @@ use CodeIgniter\Model;
 class ViewDataModel extends Model{
 
     //protected $table = "vdata";
-    //Add by DY
-    protected $table = "vdata_site";
+   protected $table = "vdata_site";
     protected $db;
     protected $allowedFields = [''];
 
